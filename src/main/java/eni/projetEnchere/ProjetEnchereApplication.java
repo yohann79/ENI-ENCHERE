@@ -1,13 +1,13 @@
-package eni.porjetEnchere;
+package eni.projetEnchere;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PorjetEnchereApplication {
+public class ProjetEnchereApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PorjetEnchereApplication.class, args);
+		SpringApplication.run(ProjetEnchereApplication.class, args);
 	}
 
 }

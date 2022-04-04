@@ -1,10 +1,10 @@
-package eni.porjetEnchere;
+package eni.projetEnchere;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PorjetEnchereApplicationTests {
+class ProjetEnchereApplicationTests {
 
 	@Test
 	void contextLoads() {
