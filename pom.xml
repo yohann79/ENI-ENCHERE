@@ -8,21 +8,19 @@
 		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ENI</groupId>
-	<artifactId>enchereEniProject</artifactId>
+	<groupId>eni</groupId>
+	<artifactId>porjetEnchere</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>enchereEniProject</name>
-	<description>Enchere project spring</description>
+	<name>porjetEnchere</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-jdbc</artifactId>
-    <version>5.3.18</version>
-</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
