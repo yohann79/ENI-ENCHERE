@@ -1,11 +1,11 @@
-package fr.eni.encheres.bo;
+package bo;
 
 public enum EtatVente {
-	CREE("vente créée"),
+	CREE("vente crï¿½ï¿½e"),
 	EN_COURS("en cours"),
-	ANNULE("annulée"),
-	ENCHERES_TERMINEES("enchères terminées"),
-	RETRAIT_EFFECTUE("retrait effectué");
+	ANNULE("annulï¿½e"),
+	ENCHERES_TERMINEES("enchï¿½res terminï¿½es"),
+	RETRAIT_EFFECTUE("retrait effectuï¿½");
 	
 	private final String message; 
 	

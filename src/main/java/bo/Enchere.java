@@ -1,4 +1,4 @@
-package enchere.bo;
+package bo;
 
 public class Enchere {
 

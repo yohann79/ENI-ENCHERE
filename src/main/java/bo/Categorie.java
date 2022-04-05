@@ -1,6 +1,6 @@
 
    
-package enchere.bo;
+package bo;
 
 import java.io.Serializable;
 
