@@ -1,11 +1,11 @@
 package bo;
 
 public enum EtatVente {
-	CREE("vente cr��e"),
+	CREE("vente créée"),
 	EN_COURS("en cours"),
-	ANNULE("annul�e"),
-	ENCHERES_TERMINEES("ench�res termin�es"),
-	RETRAIT_EFFECTUE("retrait effectu�");
+	ANNULE("annulée"),
+	ENCHERES_TERMINEES("enchéres terminées"),
+	RETRAIT_EFFECTUE("retrait effectué");
 	
 	private final String message; 
 	
