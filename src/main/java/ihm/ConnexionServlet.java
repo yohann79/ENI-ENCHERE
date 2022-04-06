@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
 import bll.UtilisateurManager;
 import bll.UtilisateurNotFound;
 import bo.Utilisateur;
@@ -44,7 +46,9 @@ public class ConnexionServlet extends HttpServlet {
 			session.setAttribute("utilisateur", utilisateur);
 			resp.sendRedirect(req.getContextPath() + "/Accueil");
 		} catch (UtilisateurNotFound e) {
-			this.doGet(req, resp);
+			HttpSession session = req.getSession();
+			session.setAttribute("error", e.getMessage());
+			req.getRequestDispatcher("WEB-INF/connexionError.jsp").forward(req, resp);
 		}
 
 	}

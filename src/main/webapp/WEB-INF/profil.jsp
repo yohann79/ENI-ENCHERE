@@ -16,54 +16,24 @@
 	}
 	%>
 	<div align="center">
-		<tr>
-			<td>Pseudo</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.pseudo}" /></td>
-		</tr>
-		<tr>
-			<td>Nom</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.nom}" /></td>
-		</tr>
-		<tr>
-			<td>Prenom</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.prenom}" /></td>
-		</tr>
-		<tr>
-			<td>Email</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.email}" /></td>
-		</tr>
-		<tr>
-			<td>Téléphone</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.telephone}" /></td>
-		</tr>
-		<tr>
-			<td>Rue</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.rue}" /></td>
-		</tr>
-		<tr>
-			<td>Code Postal</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.code_postal}" /></td>
-		</tr>
-		<tr>
-			<td>Ville</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.ville}" /></td>
-		</tr>
-		<tr>
-			<td>Crédit</td>
-			<td><input type="text" name="username"
-				placeholder="${utilisateur.credit}" /></td>
-		</tr>
-	</div>
+       <h2>Mon Profil</h2>
+        <article class="monProfil">
+
+            <p><span>Pseudo : </span><span> ${utilisateur.pseudo}</span></p>
+            <p><span>Nom :</span><span>${utilisateur.nom}</span></p>
+            <p><span>Prenom :</span><span>${utilisateur.prenom}</span></p>
+            <p><span>Email :</span><span>${utilisateur.email}</span></p>
+            <p><span>Téléphone :</span><span>${utilisateur.telephone}<span></p>
+            <p><span>Rue :</span><span>${utilisateur.rue}<span/></p>
+            <p><span>Code Postal :</span><span>${utilisateur.code_postal}<span/></p>
+            <p><span>Ville :</span><span>${utilisateur.ville}</span></p>
+            <p><span>Credit :</span><span>${utilisateur.credit}</span></p>
+    </div>
 	<form action="<%=request.getContextPath()%>/Accueil">
 		<input type="submit" value="retour a l'accueil" />
+	</form>
+		<form action="<%=request.getContextPath()%>/ModifierProfil">
+		<input type="submit" value="modifier le profil" />
 	</form>
 </body>
 </html>
