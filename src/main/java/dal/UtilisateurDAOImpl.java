@@ -22,6 +22,18 @@ public class UtilisateurDAOImpl implements UtilisateurDAO{
 			if (rs.next()) {
 				Utilisateur utilisateur = new Utilisateur();
 				utilisateur.setNoUtilisateur(rs.getInt("no_utilisateur"));
+				utilisateur.setPseudo(rs.getString("pseudo"));
+				utilisateur.setNom(rs.getString("nom"));
+				utilisateur.setPrenom(rs.getString("prenom"));
+				utilisateur.setEmail(rs.getString("email"));
+				utilisateur.setTelephone(rs.getString("telephone"));
+				utilisateur.setRue(rs.getString("rue"));
+				utilisateur.setCode_postal(rs.getString("code_postal"));
+				utilisateur.setVille(rs.getString("ville"));
+				utilisateur.setMot_de_passe(rs.getString("mot_de_passe"));
+				utilisateur.setCredit(rs.getInt("credit"));
+				utilisateur.setAdministrateur(rs.getBoolean("administrateur"));
+				return utilisateur;
 			}else {
 				throw new UtilisateurNotFound();
 			}
@@ -29,7 +41,6 @@ public class UtilisateurDAOImpl implements UtilisateurDAO{
 			// TODO remonter erreur
 			e.printStackTrace();
 		}
-		
 		return null;
 	}
 	
