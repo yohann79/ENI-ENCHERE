@@ -3,15 +3,15 @@ package bo;
 import java.sql.Date;
 
 public class ArticleVendu {
-	int noArticle ;
-	String nomArticle;
-	String description;
-	Date dateDebutEnchere;
-	Date dateFinEnchere;
-	int prixInitial;
-	int prixvente;
-	int noUtilisateur;
-	int noCategorie;
+	private int noArticle ;
+	private String nomArticle;
+	private String description;
+	private Date dateDebutEnchere;
+	private Date dateFinEnchere;
+	private int prixInitial;
+	private int prixvente;
+	private int noUtilisateur;
+	private int noCategorie;
 	
 	
 	/**
@@ -38,6 +38,9 @@ public class ArticleVendu {
 		this.prixvente = prixvente;
 		this.noUtilisateur = noUtilisateur;
 		this.noCategorie = noCategorie;
+	}
+	public ArticleVendu() {
+		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * Getter and Setter for all field 

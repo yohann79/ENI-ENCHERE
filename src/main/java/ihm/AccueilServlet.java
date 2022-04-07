@@ -1,6 +1,7 @@
 package ihm;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,18 +10,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import bll.ArticlesManager;
+import bll.ArticlesNotFound;
+import bo.ArticleVendu;
+import bo.Enchere;
 import bo.Utilisateur;
 @WebServlet("/Accueil")
 public class AccueilServlet extends HttpServlet{
-	Utilisateur utilisateur =new Utilisateur();
+	Utilisateur utilisateur ;
+	ArticlesManager articlesManager;
 	private static final long serialVersionUID = 1L;
-
+	public void init() {
+		articlesManager = new ArticlesManager();
+		utilisateur = new Utilisateur();
+	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = req.getSession();
-		utilisateur = (Utilisateur) session.getAttribute("utilisateur");
-		session.setAttribute("utilisateur",utilisateur);
-		req.getRequestDispatcher("WEB-INF/accueil.jsp").forward(req, resp);
+		try {
+			HttpSession session = req.getSession();
+			utilisateur = (Utilisateur) session.getAttribute("utilisateur");
+			ArrayList<ArticleVendu> encheres = new ArrayList<>();
+			encheres = articlesManager.getAllArticles();
+			req.setAttribute("articles", encheres);
+			req.getRequestDispatcher("WEB-INF/accueil.jsp").forward(req, resp);
+		} catch (ArticlesNotFound e) {
+			req.getRequestDispatcher("WEB-INF/accueilAucuneEnchere.jsp").forward(req, resp);
+		}
+		
 	}
 
 	@Override
