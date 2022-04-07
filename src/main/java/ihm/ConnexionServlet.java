@@ -42,7 +42,7 @@ public class ConnexionServlet extends HttpServlet {
 		String mpd = req.getParameter("password");
 		try {
 			Utilisateur utilisateur = utilisateurManager.seConnecter(user, mpd);
-			HttpSession session = req.getSession();
+			HttpSession session = req.getSession(true);
 			session.setAttribute("utilisateur", utilisateur);
 			resp.sendRedirect(req.getContextPath() + "/Accueil");
 		} catch (UtilisateurNotFound e) {

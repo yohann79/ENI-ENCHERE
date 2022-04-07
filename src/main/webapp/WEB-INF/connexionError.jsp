@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Page de connexion</title>
+<title>connexion</title>
 </head>
 <body>
 <%String error =(String) session.getAttribute("error"); %>
@@ -24,6 +24,9 @@
 			</table>
 			<p><span>${error}</span></p>
 			<input type="submit" value="Connexion" />
+		</form>
+		<form action="<%=request.getContextPath()%>/Inscription">
+		<input type="submit" value="Crée un compte utilisateur" />	
 		</form>
 	</div>
 </body>

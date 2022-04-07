@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Accueil</title>
+<title>Profil</title>
 </head>
 <body>
 	<%
@@ -17,8 +17,7 @@
 	%>
 	<div align="center">
        <h2>Mon Profil</h2>
-        <article class="monProfil">
-
+        <article>
             <p><span>Pseudo : </span><span> ${utilisateur.pseudo}</span></p>
             <p><span>Nom :</span><span>${utilisateur.nom}</span></p>
             <p><span>Prenom :</span><span>${utilisateur.prenom}</span></p>

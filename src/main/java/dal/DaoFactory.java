@@ -6,4 +6,9 @@ public class DaoFactory {
 		return new UtilisateurDAOImpl();
 	}
 
+	public static ArticleVenduDAO getEnchereDAO() {
+		// TODO Auto-generated method stub
+		return new ArticleVenduDAOImpl();
+	}
+
 }

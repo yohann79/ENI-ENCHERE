@@ -1,7 +1,7 @@
 package bo;
 
 public class Utilisateur {
-	private int noUtilisateur;
+	private int no_utilisateur;
 	private String pseudo;
 	private String nom;
 	private String prenom;
@@ -30,10 +30,10 @@ public class Utilisateur {
 	 * @param credit
 	 * @param administrateur
 	 */
-	public Utilisateur(int noUtilisateur, String nom, String prenom, String pseudo, String email, String telephone,
+	public Utilisateur(int no_utilisateur, String nom, String prenom, String pseudo, String email, String telephone,
 			String rue, String code_postal, String ville, String mot_de_passe, int credit, Boolean administrateur) {
 
-		this.noUtilisateur = noUtilisateur;
+		this.no_utilisateur = no_utilisateur;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.pseudo = pseudo;
@@ -56,12 +56,12 @@ public class Utilisateur {
 	 * Getter and Setter for all field
 	 */
 
-	public int getNoUtilisateur() {
-		return noUtilisateur;
+	public int getNo_utilisateur() {
+		return no_utilisateur;
 	}
 
-	public void setNoUtilisateur(int noUtilisateur) {
-		this.noUtilisateur = noUtilisateur;
+	public void setNo_utilisateur(int no_utilisateur) {
+		this.no_utilisateur = no_utilisateur;
 	}
 
 	public String getNom() {
