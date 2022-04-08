@@ -13,6 +13,7 @@
 <style>
 <%@ include file="../../css/accueil.css"%>
 </style>
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/ressources/img/icon.ico">
 <meta charset="ISO-8859-1">
 <title>Accueil</title>
 </head>
