@@ -1,5 +1,6 @@
 package ihm;
 
+import java.io.Console;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -13,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import bll.ArticlesManager;
 import bll.ArticlesNotFound;
 import bo.ArticleVendu;
-import bo.Enchere;
 import bo.Utilisateur;
 @WebServlet("/Accueil")
 public class AccueilServlet extends HttpServlet{
@@ -29,9 +29,9 @@ public class AccueilServlet extends HttpServlet{
 		try {
 			HttpSession session = req.getSession();
 			utilisateur = (Utilisateur) session.getAttribute("utilisateur");
-			ArrayList<ArticleVendu> encheres = new ArrayList<>();
-			encheres = articlesManager.getAllArticles();
-			req.setAttribute("articles", encheres);
+			ArrayList<ArticleVendu> articles = new ArrayList<>();
+			articles = articlesManager.getAllArticles();
+			req.setAttribute("articles", articles);
 			req.getRequestDispatcher("WEB-INF/accueil.jsp").forward(req, resp);
 		} catch (ArticlesNotFound e) {
 			req.getRequestDispatcher("WEB-INF/accueilAucuneEnchere.jsp").forward(req, resp);

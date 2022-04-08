@@ -4,7 +4,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page import="bo.ArticleVendu"%>
 <%@ page import="bo.Utilisateur"%>
 <%@ page import="java.util.List"%> 
 <!DOCTYPE html>
@@ -20,8 +19,6 @@
 
 	<%
 	Utilisateur utilisateur = new Utilisateur();
-	ArrayList<ArticleVendu> articles = new ArrayList();
-	articles = (ArrayList<ArticleVendu>) request.getAttribute("articles");
 	utilisateur = (Utilisateur) session.getAttribute("utilisateur");
 	int i;
 	%>
@@ -30,25 +27,8 @@
 		<h3>Bienvenue sur le site d'enchere de l'eni</h3>
 	</div>
 	<div id="article-container">
-		<h1>Liste des echeres </h1>
-		<!--TODO: ne pas utiliser de java dans les jsp modifier l'utilisation de la liste par des balises jstl -->
-       <%-- <c:forEach items="${articles}" var="article" >
-			<article>
-				<div><h3>la taille :${article.nomArticle}</h3>
-				</div>
-			</article>
-		</c:forEach> --%>  
-		
-		<%for (ArticleVendu article : articles){%>
-		<article>
-				<div id="article">
-				<h3><%=article.getNomArticle() %></h3>
-				<h3><%=article.getDescription() %></h3>
-				<h3><%=article.getPrixvente() %></h3>
-				<h3><%=article.getDateFinEnchere()%></h3>
-				</div>
-		</article>
-		<%}%>
+	<h2>Liste des echeres </h2>
+		<h3>Il n'y a aucune article mis au enchere</h3>
 	</div>
 	<form action="<%=request.getContextPath()%>/Profil">
 		<input type="submit" value="Profil" />
