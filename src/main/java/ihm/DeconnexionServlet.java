@@ -32,7 +32,7 @@ public class DeconnexionServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		session.removeAttribute("idUtilisateur");
+		session.removeAttribute("utilisateur");
 		session.invalidate();
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/accueilDeconnected.jsp");
