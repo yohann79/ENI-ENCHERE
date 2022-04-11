@@ -8,6 +8,9 @@
 <meta charset="ISO-8859-1">
 <title>Profil</title>
 </head>
+<style>
+<%@include file="../../css/profil.css"%>
+</style>
 <body>
      <!-- navigation -->
  	<%@ include file = "navigation.jsp" %>
@@ -19,24 +22,40 @@
 		utilisateur = (Utilisateur) session.getAttribute("utilisateur");
 	}
 	%>
-	<div align="center">
+	<div align="center" id="container">
        <h2>Mon Profil</h2>
-        <article>
-            <p><span>Pseudo : </span><span> ${utilisateur.pseudo}</span></p>
-            <p><span>Nom :</span><span>${utilisateur.nom}</span></p>
-            <p><span>Prenom :</span><span>${utilisateur.prenom}</span></p>
-            <p><span>Email :</span><span>${utilisateur.email}</span></p>
-            <p><span>Téléphone :</span><span>${utilisateur.telephone}<span></p>
-            <p><span>Rue :</span><span>${utilisateur.rue}<span/></p>
-            <p><span>Code Postal :</span><span>${utilisateur.code_postal}<span/></p>
-            <p><span>Ville :</span><span>${utilisateur.ville}</span></p>
-            <p><span>Credit :</span><span>${utilisateur.credit}</span></p>
-    </div>
+
+        <ul id="profil_list")>
+			<li>Pseudo :</li>
+			<li>Nom :</li>
+			<li>Prenom :</li>
+			<li>Email :</li>
+			<li>Téléphone :</li>
+			<li>Rue :</li>
+			<li>Code Postal :</li>
+			<li>Ville :</li>
+			<li>Credit :</li>
+			
+			<li>${utilisateur.pseudo}</li>
+			<li>${utilisateur.nom}</li>
+			<li>${utilisateur.prenom}</li>
+			<li>${utilisateur.email}</li>
+			<li>${utilisateur.telephone}</li>
+			<li>${utilisateur.rue}</li>
+			<li>${utilisateur.code_postal}</li>
+			<li>${utilisateur.ville}</li>
+			<li>${utilisateur.credit}</li>
+		</ul>
+          
+
+	<div id="button">
 		<form action="<%=request.getContextPath()%>/ModifierProfil">
-		<input type="submit" value="modifier le profil" />
-	</form>
-	<form action="<%=request.getContextPath()%>/SupprimerProfil">
-		<input type="submit" value="Suprimer le profil" />
-	</form>
+			<input type="submit" value="modifier le profil" />
+		</form>
+		<form action="<%=request.getContextPath()%>/SupprimerProfil">
+			<input type="submit" value="Suprimer le profil" />
+		</form>
+	</div>
+	</div>
 </body>
 </html>

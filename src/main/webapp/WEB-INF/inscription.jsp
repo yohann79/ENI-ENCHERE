@@ -12,7 +12,7 @@
 <body>
 
 	<div align="center" id="container">
-		<h1>Connexion</h1>
+		<h1>Inscription</h1>
 		
 		<p><a href="Connexion"><img id="bouton-retour" src="<%=request.getContextPath()%>/ressources/img/bouton-retour.jpg"></a></p>
 		

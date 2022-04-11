@@ -31,7 +31,7 @@
 	</div>
 	<div id="article-container">
 	<h2>Liste des echeres </h2>
-		<h3>Il n'y a aucune article mis au enchere</h3>
+		<h3>Aucun article aux enchères pour l'instant.</h3>
 	</div>
 
 </body>

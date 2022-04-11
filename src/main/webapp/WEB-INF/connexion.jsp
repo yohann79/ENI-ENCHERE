@@ -7,7 +7,7 @@
 <%@ include file="../../css/connexion.css"%>
 </style>
 <meta charset="ISO-8859-1">
-<title>connexion</title>
+<title>Connexion</title>
 </head>
 <body>
  	
