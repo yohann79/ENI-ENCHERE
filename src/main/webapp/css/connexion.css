@@ -1,15 +1,20 @@
 body{
     background: #67BE4B;
 }
+
 #container{
-    width:400px;
+    width:600px;
     margin:0 auto;
-    margin-top:10%;
+    margin-top:10%; 
+}
+#list{
+	column-count:2;
+	list-style: none;
 }
 /* Bordered form */
 form {
     width:100%;
-    padding: 30px;
+    padding: 10px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -39,7 +44,11 @@ input[type=submit] {
     border: none;
     cursor: pointer;
     width: 100%;
+
 }
+
+
+
 input[type=submit]:hover {
     background-color: white;
     color: #53af57;
