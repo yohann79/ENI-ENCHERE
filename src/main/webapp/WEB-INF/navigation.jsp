@@ -18,9 +18,9 @@
       <div class="navbar-links">
       <%Utilisateur connectedUser = (Utilisateur) session.getAttribute("utilisateur"); %>
           <ul id="nav">
-              <li><a href="<%=request.getContextPath()%>/Accueil">Enchères  </a></li>
+              <li><a href="<%=request.getContextPath()%>/Accueil">Accueil  </a></li>
+              <li><a href="<%=request.getContextPath()%>/Enchere">Enchère </a></li>
               <li><a href="<%=request.getContextPath()%>/Vendre">Vendre </a></li>
-              <li><a href="<%=request.getContextPath()%>/Acheter">Acheter </a></li>
               <li><a href="<%=request.getContextPath()%>/Profil=<%=connectedUser.getPseudo()%>">Mon Profil </a></li>
               <li><a href="<%=request.getContextPath()%>/Deconnextion">Deconnexion  </a></li>
           </ul>
