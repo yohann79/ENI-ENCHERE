@@ -10,6 +10,9 @@
 <title>Inscription</title>
 </head>
 <body>
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+ 	
 	<div align="center" id="container">
 		
 		<form action="<%=request.getContextPath()%>/Inscription" method="post">

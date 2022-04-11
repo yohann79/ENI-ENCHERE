@@ -8,6 +8,9 @@
 <title>Profil</title>
 </head>
 <body>
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+ 	
 	<%
 	Utilisateur utilisateur = null;
 	if (session.getAttribute("utilisateur") == null) {

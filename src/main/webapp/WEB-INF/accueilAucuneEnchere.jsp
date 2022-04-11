@@ -17,6 +17,9 @@
 </head>
 <body>
 
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+
 	<%
 	Utilisateur utilisateur = new Utilisateur();
 	utilisateur = (Utilisateur) session.getAttribute("utilisateur");

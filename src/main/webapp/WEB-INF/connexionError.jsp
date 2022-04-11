@@ -10,6 +10,9 @@
 <title>connexion</title>
 </head>
 <body>
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+ 	
 <%String error =(String) session.getAttribute("error"); %>
 	<div align="center" id="container">
 		

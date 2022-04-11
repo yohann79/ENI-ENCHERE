@@ -10,6 +10,9 @@
 <title>connexion</title>
 </head>
 <body>
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+ 	
 	<div align="center" id="container">
 		<form action="<%=request.getContextPath()%>/Connexion" method="post">
 		<h1>Connexion</h1>

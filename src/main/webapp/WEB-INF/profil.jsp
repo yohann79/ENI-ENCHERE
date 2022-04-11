@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="bll.UtilisateurManager"%>
 <%@ page import="bo.Utilisateur"%>
 <!DOCTYPE html>
 <html>
@@ -8,7 +9,10 @@
 <title>Profil</title>
 </head>
 <body>
-	<%
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+ 	
+      
 	Utilisateur utilisateur = null;
 	if (session.getAttribute("utilisateur") == null) {
 	} else {
