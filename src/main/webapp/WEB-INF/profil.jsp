@@ -12,7 +12,7 @@
      <!-- navigation -->
  	<%@ include file = "navigation.jsp" %>
  	
-      
+      <%
 	Utilisateur utilisateur = null;
 	if (session.getAttribute("utilisateur") == null) {
 	} else {
@@ -32,11 +32,11 @@
             <p><span>Ville :</span><span>${utilisateur.ville}</span></p>
             <p><span>Credit :</span><span>${utilisateur.credit}</span></p>
     </div>
-	<form action="<%=request.getContextPath()%>/Accueil">
-		<input type="submit" value="retour a l'accueil" />
-	</form>
 		<form action="<%=request.getContextPath()%>/ModifierProfil">
 		<input type="submit" value="modifier le profil" />
+	</form>
+	<form action="<%=request.getContextPath()%>/SupprimerProfil">
+		<input type="submit" value="Suprimer le profil" />
 	</form>
 </body>
 </html>

@@ -111,13 +111,14 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
     }
 
     @Override
-    public void supprimerUtilisateur(Utilisateur utilisateur) throws SQLException {
-
+    public Boolean supprimerUtilisateur(Utilisateur utilisateur) throws SQLException {
         try (Connection cnn = ConnectionProvider.getConnection();) {
-
-            PreparedStatement stm = cnn.prepareStatement("DELETE");
+        	System.out.println(utilisateur.getNom()+utilisateur.getNo_utilisateur());
+        	String req = "delete from UTILISATEURS where no_utilisateur = ?";
+            PreparedStatement stm = cnn.prepareStatement(req);
             stm.setInt(1, utilisateur.getNo_utilisateur());
             stm.executeUpdate();
+            return true;
         } catch (SQLException e) {
             throw new SQLException("erreur suppression en base \"" + e.getMessage());
         }

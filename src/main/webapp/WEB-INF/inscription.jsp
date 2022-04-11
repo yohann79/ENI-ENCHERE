@@ -10,9 +10,7 @@
 <title>Inscription</title>
 </head>
 <body>
-     <!-- navigation -->
- 	<%@ include file = "navigation.jsp" %>
- 	
+
 	<div align="center" id="container">
 		
 		<form action="<%=request.getContextPath()%>/Inscription" method="post">
@@ -31,22 +29,22 @@
 				
 				
 					<label><b>Email</b></label>
-					<input type="text" name="email" maxlength="30"/>
+					<input type="text" name="email" maxlength="50"/>
 				
 				
 					<label><b>Numéro de téléphone</b></label>
-					<input type="text" name="telephone" maxlength="30"/>
+					<input type="text" name="telephone" maxlength="15"/>
 				
 				
 					<label><b>Rue</b></label>
 					<input type="text" name="rue" maxlength="30"/>
 				
 					<label><b>Code postal</b></label>
-					<input type="text" name="codePostal" maxlength="30"/>
+					<input type="text" name="codePostal" maxlength="10"/>
 				
 				
 					<label><b>Ville</b></label>
-					<input type="text" name="ville" maxlength="30"/>
+					<input type="text" name="ville" maxlength="50"/>
 				
 				
 					<label><b>Mots de passe</b></label>

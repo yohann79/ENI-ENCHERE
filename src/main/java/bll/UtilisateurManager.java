@@ -26,8 +26,8 @@ public class UtilisateurManager {
         return utilisateurDAO.insertUtilisateur(utilisateur);
     }
 
-    public void SupprUtilisateur(Utilisateur utilisateur) throws SQLException {
-        return;
+    public Boolean supprUtilisateur(Utilisateur utilisateur) throws SQLException {
+    	return utilisateurDAO.supprimerUtilisateur(utilisateur);
     }
 
 }

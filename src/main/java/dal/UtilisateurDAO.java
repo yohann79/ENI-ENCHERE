@@ -14,5 +14,5 @@ public interface UtilisateurDAO {
 
     public Boolean insertUtilisateur(Utilisateur utilisateur) throws ErrorInsertUtilisateur, SQLException;
 
-    public void supprimerUtilisateur(Utilisateur utilisateur) throws SQLException;;
+    public Boolean supprimerUtilisateur(Utilisateur utilisateur) throws SQLException;;
 }

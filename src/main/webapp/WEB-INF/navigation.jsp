@@ -19,10 +19,9 @@
       <%Utilisateur connectedUser = (Utilisateur) session.getAttribute("utilisateur"); %>
           <ul id="nav">
               <li><a href="<%=request.getContextPath()%>/Accueil">Accueil  </a></li>
-              <li><a href="<%=request.getContextPath()%>/Enchere">Enchère </a></li>
               <li><a href="<%=request.getContextPath()%>/Vendre">Vendre </a></li>
-              <li><a href="<%=request.getContextPath()%>/Profil=<%=connectedUser.getPseudo()%>">Mon Profil </a></li>
-              <li><a href="<%=request.getContextPath()%>/Deconnextion">Deconnexion  </a></li>
+              <li><a href="<%=request.getContextPath()%>/Profil">Mon Profil </a></li>
+              <li><a href="<%=request.getContextPath()%>/Deconnexion">Deconnexion  </a></li>
           </ul>
       </div>
     </nav>

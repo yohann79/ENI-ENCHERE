@@ -29,10 +29,10 @@ public class AccueilServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			if (req.getSession().getAttribute("utilisateur") == null) {
-				HttpSession session = req.getSession();
-				utilisateur = (Utilisateur) session.getAttribute("utilisateur");
-			}
+
+			HttpSession session = req.getSession();
+			utilisateur = (Utilisateur) session.getAttribute("utilisateur");
+
 			ArrayList<ArticleVendu> articles = new ArrayList<>();
 			articles = articlesManager.getAllArticles();
 			req.setAttribute("articles", articles);
