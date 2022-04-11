@@ -19,6 +19,11 @@
 <title>Accueil</title>
 </head>
 <body>
+
+     <!-- navigation -->
+ 	<%@ include file = "navigation.jsp" %>
+ 	
+ 	
 	<%
 	Utilisateur utilisateur = new Utilisateur();
 	ArrayList<ArticleVendu> articles = new ArrayList();
@@ -34,14 +39,14 @@
 		<%
 		if (utilisateur != null) {
 		%>
-		<h2>Bonjour ${utilisateur.pseudo}</h2>
+		<h2>Bonjour  ${utilisateur.pseudo}</h2>
 		<%
 		}
 		%>
-		<h3>Bienvenue sur le site d'enchere de l'eni</h3>
+		<h3>Bienvenue sur le site d'enchere de la DreamTeam</h3>
 	</div>
 	<div id="article-container">
-		<h1>Liste des echeres</h1>
+		<h1>Liste des enchères</h1>
 		<%
 		for (ArticleVendu article : articles) {
 		%>
