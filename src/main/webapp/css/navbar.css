@@ -1,6 +1,6 @@
 #nav {
-	padding: 0; margin: 0;
 	text-align: right;
+	margin-bottom : 125px;
 }
 #nav li {
 	display: inline;

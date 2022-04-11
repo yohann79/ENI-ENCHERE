@@ -1,7 +1,15 @@
 #article-container {
 	border: 1px solid black;
+	margin : 100px;
 }
 
 #article {
 	border: 1px solid black;
+}
+
+body {
+	margin-top: 25px; 
+	margin-left : 100px;
+	margin-right: 100px;
+	margin-left: 100px;
 }

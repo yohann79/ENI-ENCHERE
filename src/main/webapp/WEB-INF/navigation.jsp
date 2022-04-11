@@ -18,10 +18,10 @@
       <div class="navbar-links">
       <%Utilisateur connectedUser = (Utilisateur) session.getAttribute("utilisateur"); %>
           <ul id="nav">
-              <li><a href="<%=request.getContextPath()%>/Accueil">Accueil  </a></li>
-              <li><a href="<%=request.getContextPath()%>/Vendre">Vendre </a></li>
-              <li><a href="<%=request.getContextPath()%>/Profil">Mon Profil </a></li>
-              <li><a href="<%=request.getContextPath()%>/Deconnexion">Deconnexion  </a></li>
+              <li><a href="<%=request.getContextPath()%>/Enchere">Enchï¿½re </a></li>
+              <li><a href="<%=request.getContextPath()%>/Vendre">Vendre un article </a></li>
+              <li><a href="<%=request.getContextPath()%>/Profil=<%=connectedUser.getPseudo()%>">Mon Profil </a></li>
+              <li><a href="<%=request.getContextPath()%>/Deconnextion">Deconnexion  </a></li>
           </ul>
       </div>
     </nav>
@@ -42,7 +42,7 @@
         </a>
         <div class="navbar-links">
            <ul id="nav">
-                <li><a href="<%=request.getContextPath()%>/Inscription"> Créer Un Compte </a></li>
+                <li><a href="<%=request.getContextPath()%>/Inscription"> Crï¿½er Un Compte </a></li>
                  <li><a href="<%=request.getContextPath()%>/Connexion"> Se Connecter  </a></li>
             </ul>
         </div>
