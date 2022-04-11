@@ -28,16 +28,7 @@
 	
 	
 	<%if (utilisateur == null) {%>
-	<form action="<%=request.getContextPath()%>/Connexion">
-		<input type="submit" value="Connexion" />
-	</form>
-	<%}else{%>
-	<form action="<%=request.getContextPath()%>/Profil">
-		<input type="submit" value="Profil" />
-	</form>
-	<form action="<%=request.getContextPath()%>/Deconnexion">
-		<input type="submit" value="Deconnexion" />
-	</form>
+
 	<%} %>
 	<div align="center">
 		<%

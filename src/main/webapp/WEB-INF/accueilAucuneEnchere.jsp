@@ -33,14 +33,6 @@
 	<h2>Liste des echeres </h2>
 		<h3>Il n'y a aucune article mis au enchere</h3>
 	</div>
-	<form action="<%=request.getContextPath()%>/Profil">
-		<input type="submit" value="Profil" />
-	</form>
-	<form action="<%=request.getContextPath()%>/Connexion">
-		<input type="submit" value="Connexion" />
-	</form>
-	<form action="<%=request.getContextPath()%>/Inscription">
-		<input type="submit" value="Inscription" />
-	</form>
+
 </body>
 </html>
