@@ -22,9 +22,9 @@
 		utilisateur = (Utilisateur) session.getAttribute("utilisateur");
 	}
 	%>
+	
 	<div align="center" id="container">
        <h2>Mon Profil</h2>
-
         <ul id="profil_list")>
 			<li>Pseudo :</li>
 			<li>Nom :</li>
@@ -46,16 +46,16 @@
 			<li>${utilisateur.ville}</li>
 			<li>${utilisateur.credit}</li>
 		</ul>
-          
 
-	<div id="button">
 		<form action="<%=request.getContextPath()%>/ModifierProfil">
 			<input type="submit" value="modifier le profil" />
 		</form>
 		<form action="<%=request.getContextPath()%>/SupprimerProfil">
 			<input type="submit" value="Suprimer le profil" />
 		</form>
-	</div>
+		
+		
+
 	</div>
 </body>
 </html>

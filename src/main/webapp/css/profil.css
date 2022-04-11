@@ -1,23 +1,29 @@
+
+body{
+    background: #67BE4B;
+}
+
 #profil_list{
 
-	display : center;
 	text-align:justify;
 	list-style: none;
 	font-size : 20px;
 	line-height: 3em;
 	margin-top : 50px;
 	column-count:2;
-	
-	width:100%;
+
+}
+
+#container{
+    width:700px;
+    margin:0 auto;
     padding: 10px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
 
-#container{
-    width:600px;
-        margin:0 auto;
+
+
 }
 
 input[type=submit] {
@@ -28,12 +34,12 @@ input[type=submit] {
     border: none;
     cursor: pointer;
 	width : 50%
-}
 
-
-
+} 
 input[type=submit]:hover {
+
     background-color: white;
     color: #53af57;
     border: 1px solid #53af57;
 }
+

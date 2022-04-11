@@ -12,12 +12,15 @@
 <body>
 
 	<div align="center" id="container">
-		<h1>Inscription</h1>
 		
-		<p><a href="Connexion"><img id="bouton-retour" src="<%=request.getContextPath()%>/ressources/img/bouton-retour.jpg"></a></p>
+		
+	
 		
 		<form action="<%=request.getContextPath()%>/Inscription" method="post">
 		
+		<h1>Inscription</h1>
+		
+			<p align="left"><a href="Connexion"><img id="bouton-retour" src="<%=request.getContextPath()%>/ressources/img/bouton-retour.jpg"><br></a></p>
 				<ul id="list">
 					<li><label><b>Pseudo</b></label>
 					<input type="text" name="pseudo" maxlength="30"/></li>
