@@ -1,10 +1,10 @@
 package ihm;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,24 +39,30 @@ public class VendreServlet extends HttpServlet {
         String description = req.getParameter("description");
         int categorie = Integer.parseInt(req.getParameter("categorie"));
         int prixInitial = Integer.parseInt(req.getParameter("prixInitial"));
-        Date dateDebutEnchere = (Date) dateFormat.parse(req.getParameter("dateDebutEnchere"));
-        Date dateFinEnchere = (Date) dateFormat.parse(req.getParameter("dateFinEnchere"));
+        String stringDateDebutEnchere = req.getParameter("dateDebutEnchere");
+        String stringDateFinEnchere = req.getParameter("dateFinEnchere");
 
         String rue = req.getParameter("rue");
         String codePostal = req.getParameter("codePostal");
         String ville = req.getParameter("ville");
 
-        Calendar calendar = Calendar.getInstance();
-        Date dateDuJour = (Date) dateFormat.parse(calendar);
+        Date dateDebutEnchere = dateFormat.parse(stringDateDebutEnchere);
+        Date dateFinEnchere = dateFormat.parse(stringDateFinEnchere);
+
+        Calendar calJour = Calendar.getInstance();
+        Calendar calDeb = Calendar.getInstance();
+        Calendar calFin = Calendar.getInstance();
+        calDeb.setTime(dateDebutEnchere);
+        calFin.setTime(dateFinEnchere);
 
         if (nomArticle.isEmpty() || description.isEmpty() || categorie == 0 || prixInitial == 0 || rue.isEmpty()
                 || codePostal.isEmpty() || ville.isEmpty()) {
             req.setAttribute("error", "les champs ne doivent pas etre vide");
             req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-        } else if (dateDebutEnchere.before(dateDuJour)) {
+        } else if (calDeb.before(calJour)) {
             req.setAttribute("error", "La date de début ne peux pas etre avant ajourd'hui");
             req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-        } else if (dateFinEnchere.before(dateDuJour) || dateFinEnchere.before(dateDuJour)) {
+        } else if (calFin.before(calJour) || calFin.before(calDeb)) {
             req.setAttribute("error", "La date de fin ne peux pas etre avant ajourd'hui ou avant la date de début");
             req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
         } else {
