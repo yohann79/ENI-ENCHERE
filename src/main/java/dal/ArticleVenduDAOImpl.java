@@ -1,6 +1,7 @@
 package dal;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -56,8 +57,8 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
             PreparedStatement stm = cnn.prepareStatement(req);
             stm.setString(1, article.getNomArticle());
             stm.setString(2, article.getDescription());
-            stm.setDate(3, article.getDateDebutEnchere());
-            stm.setDate(4, article.getDateDebutEnchere());
+            stm.setDate(3, new Date(article.getDateDebutEnchere().getTime()));
+            stm.setDate(4, new Date(article.getDateFinEnchere().getTime()));
             stm.setInt(5, article.getPrixInitial());
             stm.setInt(7, article.getNoUtilisateur());
             stm.setInt(7, article.getNoCategorie());

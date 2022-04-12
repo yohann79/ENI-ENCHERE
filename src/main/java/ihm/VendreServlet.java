@@ -1,9 +1,8 @@
 package ihm;
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bll.ArticleVenduError;
 import bo.ArticleVendu;
 import bo.Retrait;
 
@@ -33,37 +31,34 @@ public class VendreServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         String nomArticle = req.getParameter("nomArticle");
         String description = req.getParameter("description");
         int categorie = Integer.parseInt(req.getParameter("categorie"));
         int prixInitial = Integer.parseInt(req.getParameter("prixInitial"));
-        String stringDateDebutEnchere = req.getParameter("dateDebutEnchere");
-        String stringDateFinEnchere = req.getParameter("dateFinEnchere");
+        Date dateDebutEnchere = new Date();
+        try {
+            dateDebutEnchere = dateFormat.parse(req.getParameter("dateDebutEnchere"));
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        Date dateFinEnchere = new Date();
+        try {
+            dateFinEnchere = dateFormat.parse(req.getParameter("dateFinEnchere"));
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         String rue = req.getParameter("rue");
         String codePostal = req.getParameter("codePostal");
         String ville = req.getParameter("ville");
 
-        Date dateDebutEnchere = dateFormat.parse(stringDateDebutEnchere);
-        Date dateFinEnchere = dateFormat.parse(stringDateFinEnchere);
-
-        Calendar calJour = Calendar.getInstance();
-        Calendar calDeb = Calendar.getInstance();
-        Calendar calFin = Calendar.getInstance();
-        calDeb.setTime(dateDebutEnchere);
-        calFin.setTime(dateFinEnchere);
-
         if (nomArticle.isEmpty() || description.isEmpty() || categorie == 0 || prixInitial == 0 || rue.isEmpty()
                 || codePostal.isEmpty() || ville.isEmpty()) {
             req.setAttribute("error", "les champs ne doivent pas etre vide");
-            req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-        } else if (calDeb.before(calJour)) {
-            req.setAttribute("error", "La date de début ne peux pas etre avant ajourd'hui");
-            req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-        } else if (calFin.before(calJour) || calFin.before(calDeb)) {
-            req.setAttribute("error", "La date de fin ne peux pas etre avant ajourd'hui ou avant la date de début");
             req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
         } else {
 
@@ -80,16 +75,6 @@ public class VendreServlet extends HttpServlet {
             Retrait.setRue(rue);
             Retrait.setCode_postal(codePostal);
             Retrait.setVille(ville);
-
-            try {
-
-            } catch (ArticleVenduError e) {
-                req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-            } catch (SQLException e) {
-                req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-            }
         }
     }
 }

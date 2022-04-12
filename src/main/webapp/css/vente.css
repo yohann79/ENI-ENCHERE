@@ -75,4 +75,9 @@ label{
 	width: 150px;
 	display : block;
 	float : left;
+	margin-left : 10px;
+}
+
+#list1{
+	margin-bottom : 15px;
 }

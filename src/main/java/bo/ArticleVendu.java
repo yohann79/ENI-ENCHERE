@@ -1,6 +1,6 @@
 package bo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ArticleVendu {
     private int noArticle;
@@ -76,8 +76,8 @@ public class ArticleVendu {
         return dateDebutEnchere;
     }
 
-    public void setDateDebutEnchere(Date date) {
-        this.dateDebutEnchere = date;
+    public void setDateDebutEnchere(Date dateDebutEnchere) {
+        this.dateDebutEnchere = dateDebutEnchere;
     }
 
     public Date getDateFinEnchere() {
