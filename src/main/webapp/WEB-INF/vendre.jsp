@@ -24,11 +24,11 @@
 		<h1>Vendre un Article</h1>
 					
 					<label>Article</label><input type="text" name="nomArticle" maxlength="30"/><br>			
-					<label>Description</label><input type="text" name="nom" maxlength="30"/><br>								
-					<label>Categorie</label><input type="text" name="prenom" maxlength="30"/><br>							
-					<label>Mise à Prix</label><input type="text" name="email" maxlength="30"/><br>						
-					<label>Début de l'enchère</label><input type="text" name="telephone" maxlength="30"/><br>			
-					<label>Fin de l'enchère</label><input type="text" name="rue" maxlength="30"/><br>
+					<label>Description</label><input type="text" name="description" maxlength="30"/><br>								
+					<label>Categorie</label><input type="text" name="categorie" maxlength="30"/><br>							
+					<label>Mise à Prix</label><input type="text" name="prixInitial" maxlength="30"/><br>						
+					<label>Début de l'enchère</label><input type="date" name="dateDebutEnchere" maxlength="30"/><br>			
+					<label>Fin de l'enchère</label><input type="date" name="dateFinEnchere" maxlength="30"/><br>
 				<div class="main-div">
 				<div class="main-div-overlay-text">
    						 Retrait

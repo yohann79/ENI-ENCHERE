@@ -8,9 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import bll.ArticlesManager;
 import bll.ArticleVenduError;
 import bo.ArticleVendu;
 import bo.Retrait;
@@ -44,8 +42,9 @@ public class VendreServlet extends HttpServlet {
         String codePostal = req.getParameter("codePostal");
         String ville = req.getParameter("ville");
 
-        if (nomArticle.isEmpty() || description.isEmpty() || categorie.isEmpty() || prixInitial.isEmpty() ||
-                dateDebutEnchere.isEmpty() || dateFinEnchere.isEmpty() || rue.isEmpty() || codePostal.isEmpty() || ville.isEmpty() ){
+        if (nomArticle.isEmpty() || description.isEmpty() || categorie == 0 || prixInitial == 0
+                || dateDebutEnchere.isEmpty() || dateFinEnchere.isEmpty() || rue.isEmpty() || codePostal.isEmpty()
+                || ville.isEmpty()) {
             req.setAttribute("error", "les champs ne doivent pas etre vide");
             req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
         } else {
@@ -65,14 +64,14 @@ public class VendreServlet extends HttpServlet {
             Retrait.setVille(ville);
 
             try {
-                
-                } catch ( ArticleVenduError e) {
-                    req.setAttribute("error", e.getMessage());
-                    req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
-                }
+
+            } catch (ArticleVenduError e) {
+                req.setAttribute("error", e.getMessage());
+                req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
             } catch (SQLException e) {
                 req.setAttribute("error", e.getMessage());
                 req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
             }
         }
-}}
+    }
+}
