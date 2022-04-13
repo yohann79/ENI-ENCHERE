@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Profil")
+@WebServlet("/securepage/Profil")
 public class ProfilServlet extends HttpServlet {
 
     /**

@@ -16,7 +16,7 @@ import bo.Utilisateur;
 /**
  * Servlet implementation class ServletDeleteProfil
  */
-@WebServlet("/SupprimerProfil")
+@WebServlet("/securepage/SupprimerProfil")
 public class SupprCompteUtilisateurServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     UtilisateurManager utilisateurManager;
