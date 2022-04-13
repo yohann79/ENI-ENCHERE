@@ -10,9 +10,10 @@
 <style>
 <%@include file="/css/vente.css"%>
 </style>
-<body>
      <!-- navigation -->
  	<%@ include file = "../home/navigation.jsp" %>
+<body>
+
  	
 <div id="container">
 	<div id="container2">

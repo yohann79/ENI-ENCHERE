@@ -17,11 +17,15 @@
 	href="<%=request.getContextPath()%>/ressources/img/icon.ico">
 <meta charset="ISO-8859-1">
 <title>Accueil</title>
-</head>
-<body>
 
      <!-- navigation -->
  	<%@ include file = "navigation.jsp" %>
+ 	
+ 	
+</head>
+<body>
+
+
  	
  	
 	<%

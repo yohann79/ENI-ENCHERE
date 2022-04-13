@@ -15,10 +15,11 @@
 <meta charset="ISO-8859-1">
 <title>Accueil</title>
 </head>
-<body>
-
      <!-- navigation -->
  	<%@ include file = "navigation.jsp" %>
+<body>
+
+
 
 	<%
 	Utilisateur utilisateur = new Utilisateur();

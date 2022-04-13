@@ -10,9 +10,10 @@
 <style>
 <%@include file="/css/profil.css"%>
 </style>
-<body>
      <!-- navigation -->
  	<%@ include file = "../home/navigation.jsp" %>
+<body>
+
  	
 	<%
 	Utilisateur utilisateur = null;
