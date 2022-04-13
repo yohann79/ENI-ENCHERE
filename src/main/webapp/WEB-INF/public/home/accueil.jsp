@@ -11,7 +11,7 @@
 <html>
 <head>
 <style>
-<%@include file="../../css/accueil.css"%>
+<%@include file="/css/accueil.css"%>
 </style>
 <link rel="shortcut icon"
 	href="<%=request.getContextPath()%>/ressources/img/icon.ico">

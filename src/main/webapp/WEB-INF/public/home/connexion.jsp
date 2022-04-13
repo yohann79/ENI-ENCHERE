@@ -4,7 +4,7 @@
 <html>
 <head>
 <style>
-<%@ include file="../../css/connexion.css"%>
+<%@ include file="/css/connexion.css"%>
 </style>
 <meta charset="ISO-8859-1">
 <title>Connexion</title>

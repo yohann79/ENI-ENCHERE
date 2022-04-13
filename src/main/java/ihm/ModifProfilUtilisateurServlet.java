@@ -28,7 +28,7 @@ public class ModifProfilUtilisateurServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/modifProfil.jsp").forward(req, resp);
+        req.getRequestDispatcher("WEB-INF/public/securepage/modifProfil.jsp").forward(req, resp);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ModifProfilUtilisateurServlet extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("error", e.getMessage());
             session.setAttribute("champ", e);
-            req.getRequestDispatcher("WEB-INF/modifProfilError.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/public/securepage/modifProfilError.jsp").forward(req, resp);
         }
 
     }

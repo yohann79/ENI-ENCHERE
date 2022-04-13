@@ -8,11 +8,11 @@
 <title>Accueil</title>
 </head>
 <style>
-<%@include file="../../css/profil.css"%>
+<%@include file="/css/profil.css"%>
 </style>
 <body>
      <!-- navigation -->
- 	<%@ include file = "navigation.jsp" %>
+ 	<%@ include file = "../home/navigation.jsp" %>
  	
 	<%
 	Utilisateur utilisateur = null;

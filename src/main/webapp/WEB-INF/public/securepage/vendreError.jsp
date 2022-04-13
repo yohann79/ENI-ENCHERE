@@ -3,15 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-<%@ include file="../../css/vente.css"%>
-</style>
+
 <meta charset="ISO-8859-1">
 <title>Vendre</title>
 </head>
+<style>
+<%@include file="/css/vente.css"%>
+</style>
 <body>
      <!-- navigation -->
- 	<%@ include file = "navigation.jsp" %>
+ 	<%@ include file = "../home/navigation.jsp" %>
  	
 <div id="container">
 	<div id="container2">

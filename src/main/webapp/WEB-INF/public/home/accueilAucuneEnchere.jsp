@@ -10,7 +10,7 @@
 <html>
 <head>
 <style>
-<%@ include file="../../css/accueil.css"%>
+<%@ include file="/css/accueil.css"%>
 </style>
 <meta charset="ISO-8859-1">
 <title>Accueil</title>

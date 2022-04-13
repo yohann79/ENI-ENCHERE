@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.jasper.tagplugins.jstl.Util;
-
 import bll.UtilisateurManager;
 import bo.Utilisateur;
 
@@ -20,46 +18,46 @@ import bo.Utilisateur;
  */
 @WebServlet("/SupprimerProfil")
 public class SupprCompteUtilisateurServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	UtilisateurManager utilisateurManager;
+    private static final long serialVersionUID = 1L;
+    UtilisateurManager utilisateurManager;
 
-	public void init() {
-		utilisateurManager = new UtilisateurManager();
-	}
+    public void init() {
+        utilisateurManager = new UtilisateurManager();
+    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		HttpSession session = req.getSession();
-		Utilisateur connectedUser = (Utilisateur) session.getAttribute("utilisateur");
+        HttpSession session = req.getSession();
+        Utilisateur connectedUser = (Utilisateur) session.getAttribute("utilisateur");
 
-		try {
+        try {
 
-			// On supprime l'utilisateur
-			Boolean result = utilisateurManager.supprUtilisateur(connectedUser);
-			if (result) {
-				// On supprime la session
-				session.invalidate();
+            // On supprime l'utilisateur
+            Boolean result = utilisateurManager.supprUtilisateur(connectedUser);
+            if (result) {
+                // On supprime la session
+                session.invalidate();
 
-				// On redirige vers la page d'accueil
-				req.getRequestDispatcher("/Accueil").forward(req, resp);
-			}
+                // On redirige vers la page d'accueil
+                req.getRequestDispatcher("/Accueil").forward(req, resp);
+            }
 
-		} catch (SQLException e) {
-			e.printStackTrace();
-			req.getRequestDispatcher("WEB-INF/profil.jsp").forward(req, resp);
-		}
-	}
+        } catch (SQLException e) {
+            e.printStackTrace();
+            req.getRequestDispatcher("WEB-INF/public/securepage/profil.jsp").forward(req, resp);
+        }
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.doGet(req, resp);
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doGet(req, resp);
 
-	}
+    }
 }

@@ -25,7 +25,7 @@ public class InscriptionServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/inscription.jsp").forward(req, resp);
+        req.getRequestDispatcher("WEB-INF/public/home/inscription.jsp").forward(req, resp);
 
     }
 
@@ -45,11 +45,11 @@ public class InscriptionServlet extends HttpServlet {
         if (pseudo.isEmpty() || nom.isEmpty() || prenom.isEmpty() || email.isEmpty() || tel.isEmpty() || rue.isEmpty()
                 || codePostal.isEmpty() || ville.isEmpty() || motDePasse.isEmpty() || verifMotDePasse.isEmpty()) {
             req.setAttribute("error", "les champs ne doivent pas etre vide");
-            req.getRequestDispatcher("WEB-INF/inscriptionError.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/public/home/inscriptionError.jsp").forward(req, resp);
         } else {
             if (motDePasse.compareTo(verifMotDePasse) != 0) {
                 req.setAttribute("error", "erreur mots de passe different");
-                req.getRequestDispatcher("WEB-INF/inscriptionError.jsp").forward(req, resp);
+                req.getRequestDispatcher("WEB-INF/public/home/inscriptionError.jsp").forward(req, resp);
             } else {
 
                 String regExpression = "[\\p{Alpha}\\p{Digit}]";
@@ -57,7 +57,7 @@ public class InscriptionServlet extends HttpServlet {
 
                 if (pseudoNonConforme) {
                     req.setAttribute("error", "Le pseudo ne peut pas contenir de caractere spéciaux");
-                    req.getRequestDispatcher("WEB-INF/inscriptionError.jsp").forward(req, resp);
+                    req.getRequestDispatcher("WEB-INF/public/home/inscriptionError.jsp").forward(req, resp);
                 } else {
 
                     Utilisateur utilisateur = new Utilisateur();
@@ -78,17 +78,17 @@ public class InscriptionServlet extends HttpServlet {
                                 session.setAttribute("utilisateur", utilisateur);
                                 req.getRequestDispatcher("/Accueil").forward(req, resp);
                             } else {
-                                String message = "erreur inscription format de donnÃ©es non valide";
+                                String message = "erreur inscription format de données non valide";
                                 req.setAttribute("error", message);
-                                req.getRequestDispatcher("WEB-INF/inscriptionError.jsp").forward(req, resp);
+                                req.getRequestDispatcher("WEB-INF/public/home/inscriptionError.jsp").forward(req, resp);
                             }
                         } catch (ErrorInsertUtilisateur e) {
                             req.setAttribute("error", e.getMessage());
-                            req.getRequestDispatcher("WEB-INF/inscriptionError.jsp").forward(req, resp);
+                            req.getRequestDispatcher("WEB-INF/public/home/inscriptionError.jsp").forward(req, resp);
                         }
                     } catch (SQLException e) {
                         req.setAttribute("error", e.getMessage());
-                        req.getRequestDispatcher("WEB-INF/inscriptionError.jsp").forward(req, resp);
+                        req.getRequestDispatcher("WEB-INF/public/home/inscriptionError.jsp").forward(req, resp);
                     }
                 }
             }

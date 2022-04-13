@@ -33,7 +33,7 @@ public class VendreServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/vendre.jsp").forward(req, resp);
+        req.getRequestDispatcher("WEB-INF/public/securepage/vendre.jsp").forward(req, resp);
 
     }
 
@@ -68,7 +68,7 @@ public class VendreServlet extends HttpServlet {
         if (nomArticle.isEmpty() || description.isEmpty() || categorie == 0 || prixInitial == 0 || rue.isEmpty()
                 || codePostal.isEmpty() || ville.isEmpty()) {
             req.setAttribute("error", "les champs ne doivent pas etre vide");
-            req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/public/securepage/vendreError.jsp").forward(req, resp);
         } else {
 
             ArticleVendu ArticleVendu = new ArticleVendu();
@@ -99,11 +99,11 @@ public class VendreServlet extends HttpServlet {
                 } else {
                     String message = "erreur vente format de données non valide";
                     req.setAttribute("error", message);
-                    req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
+                    req.getRequestDispatcher("WEB-INF/public/securepage/vendreError.jsp").forward(req, resp);
                 }
             } catch (SQLException e) {
                 req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
+                req.getRequestDispatcher("WEB-INF/public/securepage/vendreError.jsp").forward(req, resp);
             }
         }
     }

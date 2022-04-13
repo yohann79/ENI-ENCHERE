@@ -2,7 +2,7 @@
 <!-- commit -->
  	<%@page import="bo.Utilisateur"%>
 <style>
-<%@include file="../../css/navbar.css"%>
+<%@include file="/css/navbar.css"%>
 </style>
 <% if( session.getAttribute("utilisateur") != null){ %>
  		<!--navigation-->
