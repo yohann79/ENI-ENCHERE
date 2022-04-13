@@ -52,7 +52,7 @@
 					<li><label><b>Répéter mots de passe</b></label>
 					<input type="password" name="confirmMotDePasse" maxlength="30"/></li>
 				</ul>
-			<input type="submit" value="Crï¿½er un compte" />
+			<input type="submit" value="Créer un compte" />
 		</form>
 	</div>
 

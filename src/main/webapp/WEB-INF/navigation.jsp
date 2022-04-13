@@ -42,7 +42,7 @@
         </a>
         <div class="navbar-links">
            <ul id="nav">
-                <li><a href="<%=request.getContextPath()%>/Inscription"> Crï¿½er Un Compte </a></li>
+                <li><a href="<%=request.getContextPath()%>/Inscription"> Créer Un Compte </a></li>
                  <li><a href="<%=request.getContextPath()%>/Connexion"> Se Connecter  </a></li>
             </ul>
         </div>

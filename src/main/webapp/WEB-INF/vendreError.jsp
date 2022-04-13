@@ -15,9 +15,8 @@
  	
 <div id="container">
 	<div id="container2">
-	
-	
-		 <%
+		
+	<%
 	Utilisateur utilisateur = null;
 	if (session.getAttribute("utilisateur") == null) {
 	} else {
@@ -67,6 +66,7 @@
 					<label><b>Code Postal</b></label><input type="text" name="codePostal" maxlength="30"/><br>	
 					<label><b>Ville</b></label><input type="text" name="ville" maxlength="30"/><br>
 				</div>
+				<p id = "error"><span>${error}</span></p>
 			<input type="submit" value="Annuler" /> 
 			<input type="submit" value="Enregister" />
 		</form>

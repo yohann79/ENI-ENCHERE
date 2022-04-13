@@ -20,14 +20,14 @@ public class ArticlesManager {
     }
 
     public Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException {
-        return ArticleVenduDAO.getModifArticle(article);
+        return enchereDAO.getModifArticle(article);
     }
 
     public Boolean insertArticle(ArticleVendu article) throws SQLException {
-        return ArticleVenduDAO.insertArticle(article);
+        return enchereDAO.insertArticle(article);
     }
 
     public Boolean supprimerArticle(ArticleVendu article) throws SQLException {
-        return ArticleVenduDAO.supprimerArticle(article);
+        return enchereDAO.supprimerArticle(article);
     }
 }

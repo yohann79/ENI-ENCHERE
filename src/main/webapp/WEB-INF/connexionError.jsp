@@ -25,7 +25,7 @@
 			<input id='submit' type="submit" value="Connexion" />
 		</form>
 		<form action="<%=request.getContextPath()%>/Inscription">
-			<input type="submit" value="Crée un compte utilisateur" />
+			<input type="submit" value="Créer un compte utilisateur" />
 		</form>
 	</div>
 

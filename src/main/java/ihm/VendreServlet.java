@@ -1,6 +1,7 @@
 package ihm;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,9 +11,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import bll.ArticlesManager;
 import bo.ArticleVendu;
 import bo.Retrait;
+import bo.Utilisateur;
 
 @WebServlet("/Vendre")
 public class VendreServlet extends HttpServlet {
@@ -21,6 +25,11 @@ public class VendreServlet extends HttpServlet {
      * 
      */
     private static final long serialVersionUID = 1L;
+    private ArticlesManager artcilesManager;
+
+    public void init() {
+        artcilesManager = new ArticlesManager();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,14 +39,14 @@ public class VendreServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String nomArticle = req.getParameter("nomArticle");
         String description = req.getParameter("description");
         int categorie = Integer.parseInt(req.getParameter("categorie"));
         int prixInitial = Integer.parseInt(req.getParameter("prixInitial"));
         Date dateDebutEnchere = new Date();
+
         try {
             dateDebutEnchere = dateFormat.parse(req.getParameter("dateDebutEnchere"));
         } catch (ParseException e) {
@@ -69,12 +78,33 @@ public class VendreServlet extends HttpServlet {
             ArticleVendu.setPrixInitial(prixInitial);
             ArticleVendu.setDateDebutEnchere(dateDebutEnchere);
             ArticleVendu.setDateFinEnchere(dateFinEnchere);
+            //
+            Utilisateur user = (Utilisateur) req.getSession().getAttribute("utilisateur");
+            ArticleVendu.setNoUtilisateur(user.getNo_utilisateur());
+
+            System.out.println(user.getNo_utilisateur());
 
             Retrait Retrait = new Retrait();
 
             Retrait.setRue(rue);
             Retrait.setCode_postal(codePostal);
             Retrait.setVille(ville);
+
+            try {
+                Boolean result = artcilesManager.insertArticle(ArticleVendu);
+                if (result) {
+                    HttpSession session = req.getSession();
+                    session.setAttribute("ArticleVendu", ArticleVendu);
+                    req.getRequestDispatcher("/Accueil").forward(req, resp);
+                } else {
+                    String message = "erreur vente format de données non valide";
+                    req.setAttribute("error", message);
+                    req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
+                }
+            } catch (SQLException e) {
+                req.setAttribute("error", e.getMessage());
+                req.getRequestDispatcher("WEB-INF/vendreError.jsp").forward(req, resp);
+            }
         }
     }
 }

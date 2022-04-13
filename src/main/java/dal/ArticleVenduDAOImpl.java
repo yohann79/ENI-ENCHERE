@@ -50,8 +50,9 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
         throw new ArticlesNotFound("Aucun article trouvé en base");
     }
 
+    @Override
     public Boolean insertArticle(ArticleVendu article) throws SQLException {
-        String req = "insert into ARTICLES_VENDUS values (?,?,?,?,?,?,?,?,?)";
+        String req = "insert into ARTICLES_VENDUS (nom_article,description,date_debut_encheres,date_fin_encheres,prix_initial,no_utilisateur,no_categorie) values (?,?,?,?,?,?,?)";
 
         try (Connection cnn = ConnectionProvider.getConnection();) {
             PreparedStatement stm = cnn.prepareStatement(req);
@@ -60,7 +61,7 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
             stm.setDate(3, new Date(article.getDateDebutEnchere().getTime()));
             stm.setDate(4, new Date(article.getDateFinEnchere().getTime()));
             stm.setInt(5, article.getPrixInitial());
-            stm.setInt(7, article.getNoUtilisateur());
+            stm.setInt(6, article.getNoUtilisateur());
             stm.setInt(7, article.getNoCategorie());
             stm.executeUpdate();
             return true;
@@ -70,6 +71,7 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
 
     }
 
+    @Override
     public Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException {
         // TODO Auto-generated method stub
         String req = "update ARTICLES_VENDUS SET ? = ? no_article = ?";

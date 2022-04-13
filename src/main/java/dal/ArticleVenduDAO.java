@@ -10,18 +10,9 @@ import bo.ArticleVendu;
 public interface ArticleVenduDAO {
     public ArrayList<ArticleVendu> getAllArticles() throws ArticlesNotFound;
 
-    public static Boolean insertArticle(ArticleVendu article) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public Boolean insertArticle(ArticleVendu article) throws SQLException;
 
-    public static Boolean supprimerArticle(ArticleVendu article) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public Boolean supprimerArticle(ArticleVendu article) throws SQLException;
 
-    public static Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException;
 }
