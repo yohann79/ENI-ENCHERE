@@ -18,7 +18,7 @@ import bo.ArticleVendu;
 import bo.Retrait;
 import bo.Utilisateur;
 
-@WebServlet("/securepage/Vendre")
+@WebServlet("/Vendre")
 public class VendreServlet extends HttpServlet {
 
     /**

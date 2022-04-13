@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter("/securepage/*")
+@WebFilter(value = { "/Profil", "/Vendre", "/ModifierProfil", "/Deconnexion" })
 public class LoginFiltre implements Filter {
 
     @Override
@@ -26,9 +26,9 @@ public class LoginFiltre implements Filter {
             throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
 
-        if (session == null || session.getAttribute("utilisateur") == null) {
+        if (session.getAttribute("utilisateur") == null) {
             response.sendRedirect(request.getContextPath() + "/Connexion"); // Si utilisateur non trouvé on rediriger
                                                                             // vers la connexion
         } else {

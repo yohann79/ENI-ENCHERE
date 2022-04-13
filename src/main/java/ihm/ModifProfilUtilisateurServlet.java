@@ -13,7 +13,7 @@ import bll.ErrorModifParameters;
 import bll.UtilisateurManager;
 import bo.Utilisateur;
 
-@WebServlet("/securepage/ModifierProfil")
+@WebServlet("/ModifierProfil")
 public class ModifProfilUtilisateurServlet extends HttpServlet {
     private UtilisateurManager utilisateurManager;
 

@@ -9,7 +9,6 @@
 <title>Profil</title>
 </head>
 <style>
-<style>
 <%@include file="/css/profil.css"%>
 </style>
      <!-- navigation -->
