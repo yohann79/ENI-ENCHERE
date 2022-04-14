@@ -22,8 +22,15 @@ public class Retrait {
         this.ville = ville;
     }
 
+    public Retrait(String rue, String codePostal, String ville) {
+        super();
+        this.rue = rue;
+        this.code_postal = code_postal;
+        this.ville = ville;
+    }
+
     public Retrait() {
-        // TODO Auto-generated constructor stub
+        super();
     }
 
     /**

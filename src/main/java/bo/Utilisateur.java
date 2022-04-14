@@ -51,6 +51,10 @@ public class Utilisateur {
 
     }
 
+    public Retrait getLieuRetraitParDefaut() {
+        return new Retrait(this.rue, this.code_postal, this.ville);
+    }
+
     /**
      * 
      * Getter and Setter for all field

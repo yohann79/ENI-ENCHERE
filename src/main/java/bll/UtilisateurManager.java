@@ -7,7 +7,7 @@ import dal.DaoFactory;
 import dal.UtilisateurDAO;
 
 public class UtilisateurManager {
-    private UtilisateurDAO utilisateurDAO;
+    private static UtilisateurDAO utilisateurDAO;
 
     public UtilisateurManager() {
         this.utilisateurDAO = DaoFactory.getUtilisateurDAO();
@@ -23,7 +23,7 @@ public class UtilisateurManager {
 
     }
 
-    public Boolean modifierUtilisateur(Utilisateur utilisateur) throws ErrorModifParameters {
+    public static Boolean modifierUtilisateur(Utilisateur utilisateur) throws ErrorModifParameters {
         return utilisateurDAO.getModif(utilisateur);
     }
 

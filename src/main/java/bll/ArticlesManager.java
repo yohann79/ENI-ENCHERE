@@ -8,7 +8,7 @@ import dal.ArticleVenduDAO;
 import dal.DaoFactory;
 
 public class ArticlesManager {
-    private ArticleVenduDAO articleVenduDAO;
+    private static ArticleVenduDAO articleVenduDAO;
 
     public ArticlesManager() {
         this.articleVenduDAO = DaoFactory.getArticleVenduDAO();
@@ -19,7 +19,12 @@ public class ArticlesManager {
         return articleVenduDAO.getAllArticles();
     }
 
-    public Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException {
+    public static ArticleVendu selectArticleById(int id) throws BusinessException {
+        return articleVenduDAO.getById(id);
+
+    }
+
+    public static Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException {
         return articleVenduDAO.getModifArticle(article);
     }
 

@@ -12,6 +12,9 @@ public class ArticleVendu {
     private int prixvente;
     private int noUtilisateur;
     private int noCategorie;
+    private Utilisateur vendeur;
+    private EtatVente etatVente;
+    private Retrait lieuRetrait;
 
     /**
      * all arg constructor
@@ -38,6 +41,9 @@ public class ArticleVendu {
         this.prixvente = prixvente;
         this.noUtilisateur = noUtilisateur;
         this.noCategorie = noCategorie;
+        this.vendeur = vendeur;
+        this.etatVente = EtatVente.CREE;
+        this.lieuRetrait = vendeur.getLieuRetraitParDefaut();
     }
 
     public ArticleVendu() {
@@ -120,4 +126,27 @@ public class ArticleVendu {
         this.noCategorie = noCategorie;
     }
 
+    public Utilisateur getVendeur() {
+        return vendeur;
+    }
+
+    public void setVendeur(Utilisateur vendeur) {
+        this.vendeur = vendeur;
+    }
+
+    public Retrait getLieuRetrait() {
+        return lieuRetrait;
+    }
+
+    public void setLieuRetrait(Retrait lieuRetrait) {
+        this.lieuRetrait = lieuRetrait;
+    }
+
+    public EtatVente getEtatVente() {
+        return etatVente;
+    }
+
+    public void setEtatVente(EtatVente etatVente) {
+        this.etatVente = etatVente;
+    }
 }
