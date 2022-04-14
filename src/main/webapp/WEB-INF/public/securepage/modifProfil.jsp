@@ -14,7 +14,8 @@
  	<%@ include file = "../home/navigation.jsp" %>
 <body>
 
- 	
+ 	<div id="container">
+	<div id="container2">
 	<%
 	Utilisateur utilisateur = null;
 	if (session.getAttribute("utilisateur") == null) {
@@ -22,54 +23,33 @@
 		utilisateur = (Utilisateur) session.getAttribute("utilisateur");
 	}
 	%>
-		<div align="center" id="container">
-       <h2>Mon Profil</h2>
-
-		<ul id="profil_list")>
+		<form action="<%=request.getContextPath()%>/ModifierProfil" method="post">
+       <h1>Modification</h1>
+       
+       
+	<div id="list1">
 			<p style="display: none">${utilisateur.no_utilisateur}</p>
-
-			<li>Pseudo :</li>
-			<li>Nom :</li>
-			<li>Prenom :</li>
-			<li>Email :</li>
-			<li>Téléphone :</li>
-			<li>Rue :</li>
-			<li>Code Postal :</li>
-			<li>Ville :</li>
-			<li>Credit :</li>
-			<li>Mots de passe :</li>
-
-
-			<li><input type="text" name="pseudo"
-				placeholder="${utilisateur.pseudo}" /></li>
-			<li><input type="text" name="nom"
-				placeholder="${utilisateur.nom}" /></li>
-			<li><input type="text" name="prenom"
-				placeholder="${utilisateur.prenom}" /></li>
-			<li><input type="text" name="email"
-				placeholder="${utilisateur.email}" /></li>
-			<li><input type="text" name="telephone"
-				placeholder="${utilisateur.telephone}"/><li>
-			<li><input type="text" name="rue"
-				placeholder="${utilisateur.rue}" /><li />
-			<li><input type="text" name="code_postal"
-				placeholder="${utilisateur.code_postal}" /><li />
-			<li><input type="text" name="ville"
-				placeholder="${utilisateur.ville}" /></li>
-			<li><input type="text" name="credit"
-				placeholder="${utilisateur.credit}" /></li>
-			<li><input type="password" name="mot_de_passe"
-				placeholder="${utilisateur.mot_de_passe}" /></li>
-
-		</ul>
+			
+			<label>Pseudo :</label><input type="text" name="pseudo" placeholder="${utilisateur.pseudo}" /><br>			
+			<label>Nom :</label><input type="text" name="nom" placeholder="${utilisateur.nom}" /><br>	
+			<label>Prenom :</label><input type="text" name="prenom" placeholder="${utilisateur.prenom}" /><br>	
+			<label>Email :</label><input type="text" name="email" placeholder="${utilisateur.email}" /><br>	
+			<label>Téléphone :</label><input type="text" name="telephone" placeholder="${utilisateur.telephone}" /><br>	
+			<label>Rue :</label><input type="text" name="rue" placeholder="${utilisateur.rue}" /><br>	
+			<label>Code Postal :</label><input type="text" name="code_postal" placeholder="${utilisateur.code_postal}" /><br>	
+			<label>Ville :</label><input type="text" name="ville" placeholder="${utilisateur.ville}" /><br>	
+			<label>Credit :</label><input type="text" name="credit"  disabled="disabled" placeholder="${utilisateur.credit}" /><br>	
+			<label>Mots de passe :</label><input type="text" name="mot_de_passe" placeholder="${utilisateur.mot_de_passe}" /><br>	
 	
-    <form action="<%=request.getContextPath()%>/Accueil">
-		<input type="submit" value="retour a l'accueil" />
-	</form>
+	</div>
 	
-	<form action="<%=request.getContextPath()%>/ModifierProfil" method="post">
-		<input type="submit" value="confirmer modification" />
+	<input type="submit" value="Enregister" />
+   			
+   				</form>
+   <form action="<%=request.getContextPath()%>/Accueil" method="post">
+			<input type="submit" value="Annuler" /> 
 	</form>
+	</div>
 	</div>
 </body>
 </html>

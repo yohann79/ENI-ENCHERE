@@ -9,13 +9,15 @@
 <title>Profil</title>
 </head>
 <style>
+
 <%@include file="/css/profil.css"%>
 </style>
      <!-- navigation -->
  	<%@ include file = "../home/navigation.jsp" %>
 <body>
 
- 	
+ 	<div id="container">
+		<div id="container2">
       <%
 	Utilisateur utilisateur = null;
 	if (session.getAttribute("utilisateur") == null) {
@@ -24,30 +26,25 @@
 	}
 	%>
 	
-	<div align="center" id="container">
-       <h2>Mon Profil</h2>
-        <ul id="profil_list")>
-			<li>Pseudo :</li>
-			<li>Nom :</li>
-			<li>Prenom :</li>
-			<li>Email :</li>
-			<li>Téléphone :</li>
-			<li>Rue :</li>
-			<li>Code Postal :</li>
-			<li>Ville :</li>
-			<li>Credit :</li>
+	
+       <h1>Mon Profil</h1>
+       
+        
+        <div id="list1">
 			
-			<li>${utilisateur.pseudo}</li>
-			<li>${utilisateur.nom}</li>
-			<li>${utilisateur.prenom}</li>
-			<li>${utilisateur.email}</li>
-			<li>${utilisateur.telephone}</li>
-			<li>${utilisateur.rue}</li>
-			<li>${utilisateur.code_postal}</li>
-			<li>${utilisateur.ville}</li>
-			<li>${utilisateur.credit}</li>
-		</ul>
-
+			<label>Pseudo :</label><input type="text" value="${utilisateur.pseudo}" disabled="disabled"/><br>			
+			<label>Nom :</label><input type="text" value="${utilisateur.nom}" disabled="disabled"/><br>	
+			<label>Prenom :</label><input type="text" value="${utilisateur.prenom}" disabled="disabled"/><br>	
+			<label>Email :</label><input type="text" value="${utilisateur.email}" disabled="disabled"/><br>	
+			<label>Téléphone :</label><input type="text"  value="${utilisateur.telephone}" disabled="disabled"/><br>	
+			<label>Rue :</label><input type="text" value="${utilisateur.rue}" disabled="disabled"/><br>	
+			<label>Code Postal :</label><input type="text" value="${utilisateur.code_postal}" disabled="disabled"/><br>	
+			<label>Ville :</label><input type="text" name="ville" value="${utilisateur.ville}" disabled="disabled"/><br>	
+			<label>Credit :</label><input type="text" name="credit"  disabled="disabled" placeholder="${utilisateur.credit}" disabled="disabled"/><br>	
+			<label>Mots de passe :</label><input type="text" value="${utilisateur.mot_de_passe}" disabled="disabled"/><br>	
+	
+	</div>
+		
 		<form action="<%=request.getContextPath()%>/ModifierProfil">
 			<input type="submit" value="modifier le profil" />
 		</form>
@@ -55,7 +52,7 @@
 			<input type="submit" value="Suprimer le profil" />
 		</form>
 		
-		
+		</div>
 
 	</div>
 </body>
