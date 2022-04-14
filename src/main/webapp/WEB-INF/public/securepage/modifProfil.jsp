@@ -30,22 +30,23 @@
 	<div id="list1">
 			<p style="display: none">${utilisateur.no_utilisateur}</p>
 			
-			<label>Pseudo :</label><input type="text" name="pseudo" placeholder="${utilisateur.pseudo}" /><br>			
-			<label>Nom :</label><input type="text" name="nom" placeholder="${utilisateur.nom}" /><br>	
-			<label>Prenom :</label><input type="text" name="prenom" placeholder="${utilisateur.prenom}" /><br>	
-			<label>Email :</label><input type="text" name="email" placeholder="${utilisateur.email}" /><br>	
-			<label>Téléphone :</label><input type="text" name="telephone" placeholder="${utilisateur.telephone}" /><br>	
-			<label>Rue :</label><input type="text" name="rue" placeholder="${utilisateur.rue}" /><br>	
-			<label>Code Postal :</label><input type="text" name="code_postal" placeholder="${utilisateur.code_postal}" /><br>	
-			<label>Ville :</label><input type="text" name="ville" placeholder="${utilisateur.ville}" /><br>	
-			<label>Credit :</label><input type="text" name="credit"  disabled="disabled" placeholder="${utilisateur.credit}" /><br>	
-			<label>Mots de passe :</label><input type="text" name="mot_de_passe" placeholder="${utilisateur.mot_de_passe}" /><br>	
-	
+			<label>Pseudo :</label><input type="text" name="pseudo" placeholder="${utilisateur.pseudo}" required/><br>			
+			<label>Nom :</label><input type="text" name="nom" placeholder="${utilisateur.nom}" required/><br>	
+			<label>Prenom :</label><input type="text" name="prenom" placeholder="${utilisateur.prenom}" required/><br>	
+			<label>Email :</label><input type="text" name="email" placeholder="${utilisateur.email}"required/><br>	
+			<label>Téléphone :</label><input type="text" name="telephone" placeholder="${utilisateur.telephone}" required/><br>	
+			<label>Rue :</label><input type="text" name="rue" placeholder="${utilisateur.rue}" required/><br>	
+			<label>Code Postal :</label><input type="text" name="codePostal" placeholder="${utilisateur.code_postal}" required/><br>	
+			<label>Ville :</label><input type="text" name="ville" placeholder="${utilisateur.ville}" required/><br>	
+			<label>Mots de passe :</label><input type="password" name="motDePasse"  required/><br>	
+			<label>Mots de passe :</label><input type="password" name="confirmMotDePasse"  required/><br>	
 	</div>
 	
+
 	<input type="submit" value="Enregister" />
-   			
-   				</form>
+	<%System.out.println("test form"); %>
+
+   	</form>
    <form action="<%=request.getContextPath()%>/Accueil" method="post">
 			<input type="submit" value="Annuler" /> 
 	</form>

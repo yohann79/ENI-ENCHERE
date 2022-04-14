@@ -41,8 +41,7 @@
 			<label>Code Postal :</label><input type="text" value="${utilisateur.code_postal}" disabled="disabled"/><br>	
 			<label>Ville :</label><input type="text" name="ville" value="${utilisateur.ville}" disabled="disabled"/><br>	
 			<label>Credit :</label><input type="text" name="credit"  disabled="disabled" placeholder="${utilisateur.credit}" disabled="disabled"/><br>	
-			<label>Mots de passe :</label><input type="text" value="${utilisateur.mot_de_passe}" disabled="disabled"/><br>	
-	
+
 	</div>
 		
 		<form action="<%=request.getContextPath()%>/ModifierProfil">
