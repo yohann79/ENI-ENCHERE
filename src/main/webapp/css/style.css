@@ -35,8 +35,6 @@ h1{
 	margin-bottom : 100px;
 }
 
-
-/* Set a style for all buttons */
 input[type=submit] {
     background-color: #53af57;
     color: white;
@@ -59,7 +57,6 @@ input[type=submit]:hover {
   animation: shake 0.5s;
 
 }
-
 .main-div {
   	position: relative;
   	border: 1px solid black;
@@ -77,17 +74,12 @@ input[type=submit]:hover {
 }
 
 label{
-	
 	width: 150px;
 	display : block;
 	float : left;
-	margin-left : 125px;
+	margin-left : 10px;
 }
 
 #list1{
 	margin-bottom : 15px;
-}
-
-input[type=text] {
-	width : 300px;
 }

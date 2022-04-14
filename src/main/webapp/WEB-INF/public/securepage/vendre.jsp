@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Out"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page import="bo.ArticleVendu"%>
+<%@ page import="bo.Utilisateur"%>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +13,7 @@
 <title>Vendre</title>
 </head>
 <style>
-<%@include file="/css/vente.css"%>
+<%@include file="/css/style.css"%>
 </style>
      <!-- navigation -->
  	<%@ include file = "../home/navigation.jsp" %>

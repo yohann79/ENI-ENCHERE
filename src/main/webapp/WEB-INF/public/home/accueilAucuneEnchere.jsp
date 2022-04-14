@@ -1,9 +1,9 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.Out"%>
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
-<%@page import="bo.ArticleVendu"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Out"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page import="bo.ArticleVendu"%>
 <%@ page import="bo.Utilisateur"%>
 <%@ page import="java.util.List"%> 
 <!DOCTYPE html>

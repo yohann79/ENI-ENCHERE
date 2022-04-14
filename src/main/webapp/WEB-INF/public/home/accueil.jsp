@@ -1,9 +1,8 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.Out"%>
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
-<%@page import="bo.ArticleVendu"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Out"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page import="bo.ArticleVendu"%>
 <%@ page import="bo.Utilisateur"%>
 <%@ page import="java.util.List"%>
@@ -15,7 +14,6 @@
 </style>
 <link rel="shortcut icon"
 	href="<%=request.getContextPath()%>/ressources/img/icon.ico">
-<meta charset="ISO-8859-1">
 <title>Accueil</title>
 
      <!-- navigation -->
@@ -64,11 +62,11 @@
 					<%=article.getDescription()%></h3>
 				<h3>
 					Prix :
-					<%=article.getPrixvente()%></h3>
+					<%=article.getPrixInitial()%></h3>
 				<h3>
 					Date de fin de l'enchere :
 					<%=article.getDateFinEnchere()%></h3>
-				<form action="<%=request.getContextPath()%>/Article">
+				<form action="<%=request.getContextPath()%>/Enchere">
 					<input type="submit" value="Acceder à l'article" />
 				</form>
 			</div>
