@@ -14,7 +14,7 @@
             <i class="material-icons">menu</i>
         </span>
         <!-- <div class=""> -->
-       <a href="<%=request.getContextPath()%>/ListeEnchere" class="logo"><img src="/ressources/img/logoenchere.png" alt=""></a>
+       <a href="<%=request.getContextPath()%>/ListeEnchere" class="logo"><img src="img/logoenchere.png" alt=""></a>
       
       <a href="#" class="toggle-sbutton">
           <span class="bar"></span>

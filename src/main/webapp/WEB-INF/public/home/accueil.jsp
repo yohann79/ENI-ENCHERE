@@ -48,12 +48,12 @@
 		<h3>Bienvenue sur le site d'enchere de la DreamTeam</h3>
 	</div>
 	<div id="article-container">
-		<h1>Liste des enchères</h1>
+		<h1>Liste des dernières enchères</h1>
 		<%
 		for (ArticleVendu article : articles) {
 		%>
 		<article>
-			<div id="article" align="center">
+			<div id="article" >
 				<h3>
 					Nom :
 					<%=article.getNomArticle()%></h3>
