@@ -42,7 +42,7 @@ public class EnchereServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/public/securepage/detailVente.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/public/securepage/detailVente.jsp").forward(request, response);
     }
 
     /**
@@ -90,7 +90,7 @@ public class EnchereServlet extends HttpServlet {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            request.getRequestDispatcher("WEB-INF/public/home/Accueil.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/public/home/Accueil.jsp").forward(request, response);
         }
 
     }

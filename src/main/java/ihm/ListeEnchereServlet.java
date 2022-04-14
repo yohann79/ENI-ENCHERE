@@ -31,7 +31,7 @@ public class ListeEnchereServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/public/home/listeEnchere.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/public/home/listeEnchere.jsp");
         dispatcher.forward(request, response);
 
     }
