@@ -2,8 +2,8 @@
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="bo.ArticleVendu"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="bo.ArticleVendu"%>
 <%@ page import="bo.Utilisateur"%>
 <%@ page import="java.util.List"%>
@@ -50,7 +50,7 @@
 		<h3>Bienvenue sur le site d'enchere de la DreamTeam</h3>
 	</div>
 	<div id="article-container">
-		<h1>Liste des enchères</h1>
+		<h1>Liste des enchÃ¨res</h1>
 		<%
 		for (ArticleVendu article : articles) {
 		%>
@@ -69,7 +69,7 @@
 					Date de fin de l'enchere :
 					<%=article.getDateFinEnchere()%></h3>
 				<form action="<%=request.getContextPath()%>/Article">
-					<input type="submit" value="Acceder à l'article" />
+					<input type="submit" value="Acceder Ã  l'article" />
 				</form>
 			</div>
 		</article>

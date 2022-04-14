@@ -2,8 +2,8 @@
 <%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="bo.ArticleVendu"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="bo.Utilisateur"%>
 <%@ page import="java.util.List"%> 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
 	</div>
 	<div id="article-container">
 	<h2>Liste des echeres </h2>
-		<h3>Aucun article aux enchères pour l'instant.</h3>
+		<h3>Aucun article aux enchÃ¨res pour l'instant.</h3>
 	</div>
 
 </body>

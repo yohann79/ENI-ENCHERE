@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@page import="bll.UtilisateurManager"%>
 <%@ page import="bo.Utilisateur"%>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
 			<label>Nom :</label><input type="text" value="${utilisateur.nom}" disabled="disabled"/><br>	
 			<label>Prenom :</label><input type="text" value="${utilisateur.prenom}" disabled="disabled"/><br>	
 			<label>Email :</label><input type="text" value="${utilisateur.email}" disabled="disabled"/><br>	
-			<label>Téléphone :</label><input type="text"  value="${utilisateur.telephone}" disabled="disabled"/><br>	
+			<label>TÃ©lÃ©phone :</label><input type="text"  value="${utilisateur.telephone}" disabled="disabled"/><br>	
 			<label>Rue :</label><input type="text" value="${utilisateur.rue}" disabled="disabled"/><br>	
 			<label>Code Postal :</label><input type="text" value="${utilisateur.code_postal}" disabled="disabled"/><br>	
 			<label>Ville :</label><input type="text" name="ville" value="${utilisateur.ville}" disabled="disabled"/><br>	

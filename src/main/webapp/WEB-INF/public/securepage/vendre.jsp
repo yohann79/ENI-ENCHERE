@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,15 +37,15 @@
 					
 					<label>Categorie</label><input type="hidden" name="select_extra" value="1">
 					<select name="categorie" id=1>
-							<option value="">Selectionne une Catégorie</option>
+							<option value="">Selectionne une CatÃ©gorie</option>
         					<option value=2>Informatique</option>
-        					<option value=3>Véhicule</option>
+        					<option value=3>VÃ©hicule</option>
         					<option value=4>Meuble</option>
         					<option value=5>Sport</option>
         					<option value=6>Mode</option>
         					<option value=7>Gaming</option>
         					<option value=8>Enfant</option>
-        					<option value=9>Cosmétique</option>
+        					<option value=9>CosmÃ©tique</option>
     				</select><br>							
 
 
@@ -55,9 +55,9 @@
 
 
 							
-					<label>Mise à Prix</label><input type="text" name="prixInitial" maxlength="30"/><br>						
-					<label>Début de l'enchère</label><input type="date" name="dateDebutEnchere" min=datetime-local max=datetime-local+30/><br>			
-					<label>Fin de l'enchère</label><input type="date" name="dateFinEnchere" min=datetime-local max=datetime-local+60/><br>
+					<label>Mise Ã  Prix</label><input type="text" name="prixInitial" maxlength="30"/><br>						
+					<label>DÃ©but de l'enchÃ¨re</label><input type="date" name="dateDebutEnchere" min=datetime-local max=datetime-local+30/><br>			
+					<label>Fin de l'enchÃ¨re</label><input type="date" name="dateFinEnchere" min=datetime-local max=datetime-local+60/><br>
 					</div>
 				<div class="main-div">
 				<div class="main-div-overlay-text">

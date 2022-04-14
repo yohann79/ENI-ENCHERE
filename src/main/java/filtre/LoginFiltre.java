@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(value = { "/Profil", "/Vendre", "/ModifierProfil", "/Deconnexion" })
+@WebFilter(value = { "/Enchere", "/Profil", "/Vendre", "/ModifierProfil", "/Deconnexion" })
 public class LoginFiltre implements Filter {
 
     @Override

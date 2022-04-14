@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +33,7 @@
 					<input type="text" name="email" maxlength="50"/>
 				
 				
-					<label><b>Numéro de téléphone</b></label>
+					<label><b>NumÃ©ro de tÃ©lÃ©phone</b></label>
 					<input type="text" name="telephone" maxlength="15"/>
 				
 				
@@ -53,10 +53,10 @@
 					<input type="password" name="motDePasse" maxlength="30"/>
 				
 				
-					<label><b>Répéter mots de passe</b></label>
+					<label><b>RÃ©pÃ©ter mots de passe</b></label>
 					<input type="password" name="confirmMotDePasse" maxlength="30"/>
 					<p id = "error"><span>${error}</span></p>
-			<input type="submit" value="Créer un compte" />
+			<input type="submit" value="CrÃ©er un compte" />
 		</form>
 	</div>
 </body>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +25,7 @@
 			<input id='submit' type="submit" value="Connexion" />
 		</form>
 		<form action="<%=request.getContextPath()%>/Inscription">
-			<input type="submit" value="Créer un compte utilisateur" />
+			<input type="submit" value="CrÃ©er un compte utilisateur" />
 		</form>
 	</div>
 

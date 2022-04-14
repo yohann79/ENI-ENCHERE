@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,7 @@
 					<li><label><b>Email</b></label>
 					<input type="text" name="email" maxlength="50"/></li>			
 				
-					<li><label><b>Num�ro de t�l�phone</b></label>
+					<li><label><b>Numï¿½ro de tï¿½lï¿½phone</b></label>
 					<input type="text" name="telephone" maxlength="15"/></li>				
 				
 					<li><label><b>Rue</b></label>
@@ -49,10 +49,10 @@
 					<li><label><b>Mots de passe</b></label>
 					<input type="password" name="motDePasse" maxlength="30"/></li>
 								
-					<li><label><b>R�p�ter mots de passe</b></label>
+					<li><label><b>Rï¿½pï¿½ter mots de passe</b></label>
 					<input type="password" name="confirmMotDePasse" maxlength="30"/></li>
 				</ul>
-			<input type="submit" value="Cr�er un compte" />
+			<input type="submit" value="Créer un compte" />
 		</form>
 	</div>
 
