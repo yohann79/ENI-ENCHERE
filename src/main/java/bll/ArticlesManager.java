@@ -8,26 +8,26 @@ import dal.ArticleVenduDAO;
 import dal.DaoFactory;
 
 public class ArticlesManager {
-    private ArticleVenduDAO enchereDAO;
+    private ArticleVenduDAO articleVenduDAO;
 
     public ArticlesManager() {
-        this.enchereDAO = DaoFactory.getEnchereDAO();
+        this.articleVenduDAO = DaoFactory.getArticleVenduDAO();
     }
 
     public ArrayList<ArticleVendu> getAllArticles() throws ArticlesNotFound {
         // TODO Auto-generated method stub
-        return enchereDAO.getAllArticles();
+        return articleVenduDAO.getAllArticles();
     }
 
     public Boolean getModifArticle(ArticleVendu article) throws ErrorModifArticle, SQLException {
-        return enchereDAO.getModifArticle(article);
+        return articleVenduDAO.getModifArticle(article);
     }
 
     public Boolean insertArticle(ArticleVendu article) throws SQLException {
-        return enchereDAO.insertArticle(article);
+        return articleVenduDAO.insertArticle(article);
     }
 
     public Boolean supprimerArticle(ArticleVendu article) throws SQLException {
-        return enchereDAO.supprimerArticle(article);
+        return articleVenduDAO.supprimerArticle(article);
     }
 }
