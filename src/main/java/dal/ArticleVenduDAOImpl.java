@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import bll.ArticlesNotFound;
+import bll.BusinessException;
 import bll.ErrorModifArticle;
 import bo.ArticleVendu;
 
@@ -48,6 +49,27 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
             e.printStackTrace();
         }
         throw new ArticlesNotFound("Aucun article trouvé en base");
+    }
+
+    @Override
+    public ArticleVendu getById(int id) throws BusinessException {
+
+        ArticleVendu articleVendu = null;
+        String req = "select * from ARTICLES_VENDUS where no_article= ?";
+        try (Connection cnx = ConnectionProvider.getConnection()) {
+            PreparedStatement stm = cnx.prepareStatement(req);
+            stm.setInt(1, id);
+
+            ResultSet rs = stm.executeQuery();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            BusinessException businessException = new BusinessException();
+            businessException.ajouterErreur(CodesResultatDAL.LECTURE_ARTICLES_ECHEC);
+            throw businessException;
+
+        }
+        return articleVendu;
     }
 
     @Override

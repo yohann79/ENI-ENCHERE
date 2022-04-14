@@ -2,6 +2,7 @@ package dal;
 
 import java.sql.SQLException;
 
+import bll.BusinessException;
 import bll.ErrorInsertUtilisateur;
 import bll.ErrorModifParameters;
 import bll.UtilisateurNotFound;
@@ -15,4 +16,6 @@ public interface UtilisateurDAO {
     public Boolean insertUtilisateur(Utilisateur utilisateur) throws ErrorInsertUtilisateur, SQLException;
 
     public Boolean supprimerUtilisateur(Utilisateur utilisateur) throws SQLException;
+
+    public Utilisateur getById(int id) throws BusinessException;
 }

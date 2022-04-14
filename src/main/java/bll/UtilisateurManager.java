@@ -18,6 +18,11 @@ public class UtilisateurManager {
         return utilisateurDAO.getUtilisateur(user, mpd);
     }
 
+    public Utilisateur selectUserById(int id) throws BusinessException {
+        return utilisateurDAO.getById(id);
+
+    }
+
     public Boolean modifierUtilisateur(Utilisateur utilisateur) throws ErrorModifParameters {
         return utilisateurDAO.getModif(utilisateur);
     }
@@ -27,7 +32,7 @@ public class UtilisateurManager {
     }
 
     public Boolean supprUtilisateur(Utilisateur utilisateur) throws SQLException {
-    	return utilisateurDAO.supprimerUtilisateur(utilisateur);
+        return utilisateurDAO.supprimerUtilisateur(utilisateur);
     }
 
 }
