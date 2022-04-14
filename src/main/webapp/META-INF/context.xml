@@ -6,8 +6,8 @@
 		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
 		type="javax.sql.DataSource"
 		
-		url="jdbc:sqlserver://enchere-eni.database.windows.net:1433;database=enchere-eni;"
-		username="admin-enchere@enchere-eni"
+		url="jdbc:sqlserver://enchere-eni1.database.windows.net:1433;database=eni-enchere;"
+		username="admin-eni"
 		password="Pa$$w0rd"
 		
 		maxTotal="100"
