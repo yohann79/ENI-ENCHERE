@@ -1,62 +1,92 @@
 package bo;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.time.LocalDate;
 
-public class Enchere {
-	private int no_enchere;
-	private Date date_enchere;
-	private int montant_enchere;
-	private int no_article;
-	private int no_utilisateur;
-	
-	
-	
-	
-	
-	public Enchere(int no_enchere, Date date_enchere, int montant_enchere, int no_article, int no_utilisateur) {
-		super();
-		this.no_enchere = no_enchere;
-		this.date_enchere = date_enchere;
-		this.montant_enchere = montant_enchere;
-		this.no_article = no_article;
-		this.no_utilisateur = no_utilisateur;
-	}
-	public Enchere() {
-	}
+public class Enchere implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private int id;
+    private LocalDate date;
+    private int montant;
+    private ArticleVendu article;
+    private Utilisateur encherisseur;
+    private boolean remporte = false;
 
+    // Constructeurs
 
+    public Enchere() {
 
+    }
 
+    public Enchere(LocalDate date, int montant, ArticleVendu article, Utilisateur encherisseur) {
+        this.date = date;
+        this.montant = montant;
+        this.article = article;
+        this.encherisseur = encherisseur;
+        this.setRemporte(false);
+    }
 
-	public int getNo_enchere() {
-		return no_enchere;
-	}
-	public void setNo_enchere(int no_enchere) {
-		this.no_enchere = no_enchere;
-	}
-	public Date getDate_enchere() {
-		return date_enchere;
-	}
-	public void setDate_enchere(Date date_enchere) {
-		this.date_enchere = date_enchere;
-	}
-	public int getMontant_enchere() {
-		return montant_enchere;
-	}
-	public void setMontant_enchere(int montant_enchere) {
-		this.montant_enchere = montant_enchere;
-	}
-	public int getNo_article() {
-		return no_article;
-	}
-	public void setNo_article(int no_article) {
-		this.no_article = no_article;
-	}
-	public int getNo_utilisateur() {
-		return no_utilisateur;
-	}
-	public void setNo_utilisateur(int no_utilisateur) {
-		this.no_utilisateur = no_utilisateur;
-	}
-	
+    public Enchere(int id, LocalDate date, int montant, ArticleVendu article, Utilisateur encherisseur) {
+        this(date, montant, article, encherisseur);
+        this.id = id;
+        this.setRemporte(false);
+    }
+
+    // Gettes & Setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public int getMontant() {
+        return montant;
+    }
+
+    public void setMontant(int montant) {
+        this.montant = montant;
+    }
+
+    public ArticleVendu getArticle() {
+        return article;
+    }
+
+    public void setArticle(ArticleVendu article) {
+        this.article = article;
+    }
+
+    public Utilisateur getEncherisseur() {
+        return encherisseur;
+    }
+
+    public void setEncherisseur(Utilisateur encherisseur) {
+        this.encherisseur = encherisseur;
+    }
+
+    public boolean isRemporte() {
+        return remporte;
+    }
+
+    public void setRemporte(boolean remporte) {
+        this.remporte = remporte;
+    }
+
+    // ToString
+    @Override
+    public String toString() {
+        return "Enchere [id=" + id + ", date=" + date + ", montant=" + montant + ", article=" + article
+                + ", encherisseur=" + encherisseur + "]";
+    }
+
 }
