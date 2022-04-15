@@ -29,10 +29,10 @@
 
 <div class="search-bar">
         
-       <label>Categorie : </label>
+       
        <input type="hidden" name="select_extra" value="1">
 					<select name="categorie" id=1>
-							<option value="">Toutes</option>
+							<option value="">Catégorie</option>
         					<option value=2>Informatique</option>
         					<option value=3>Véhicule</option>
         					<option value=4>Meuble</option>
@@ -47,7 +47,7 @@
             <input type="text" class="search" placeholder="Mots Clées">
         </div>
 
-        <button type="submit" class="search-btn">
+        <button type="submit" class="search-btn"> <img src="img/search.png"/>
             <i class="fas fa-search"></i>
         </button>
     </div>
