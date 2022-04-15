@@ -64,7 +64,7 @@
 				<h4>
 					Fin de l'enchere :
 					<%=article.getDateFinEnchere()%></h4>
-				<form action="<%=request.getContextPath()%>/Enchere?NoArticle=<%=article.getNoArticle() %>"><%=article.getNomArticle()%>>
+				<form action="<%=request.getContextPath()%>/Enchere?NoArticle=<%=article.getNoArticle() %>">
 					<input type="submit" value="Acceder à l'article"/>
 				</form>
 			</div>
