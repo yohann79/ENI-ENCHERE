@@ -59,8 +59,8 @@
          <div class="navbar-links">
           <ul id="nav">
           <li class="links"><a href="<%=request.getContextPath()%>/Accueil">Accueil </a></li>
-            <li class="links"><a href="<%=request.getContextPath()%>/Inscription">Connexion </a></li>
-             <li class="links"><a href="<%=request.getContextPath()%>/Connexion">Inscription </a></li>
+            <li class="links"><a href="<%=request.getContextPath()%>/Connexion">Connexion </a></li>
+             <li class="links"><a href="<%=request.getContextPath()%>/Inscription">Inscription </a></li>
              
               
              
