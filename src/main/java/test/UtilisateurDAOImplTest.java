@@ -19,6 +19,6 @@ public class UtilisateurDAOImplTest {
 		String mpdTrue = "test";
 		Utilisateur utilisateur = utilisateurDaoImple.getUtilisateur(pseudoTrue, mpdTrue);
 		assertEquals(pseudoTrue,utilisateur.getPseudo());
-		
+		assertEquals(mpdTrue,utilisateur.getMot_de_passe());
 	}
 }

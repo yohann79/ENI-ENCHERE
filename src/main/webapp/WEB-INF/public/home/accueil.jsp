@@ -68,11 +68,14 @@
 				<h4>
 					Fin de l'enchere :
 					<%=article.getDateFinEnchere()%></h4>
-					
-				<form action="<%=request.getContextPath()%>/Enchere" >
-					<input type="hidden" name="articleDetail"  value=<%=articles %> />
+
+				<%
+					if (utilisateur != null) {
+				%>
+				<form action="<%=request.getContextPath()%>/Enchere">
 					<input type="submit" value="Acceder à l'article"/>
 				</form>
+				<%} %>
 			</div>
 		
 		<%
