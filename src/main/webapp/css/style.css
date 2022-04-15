@@ -153,13 +153,7 @@ img {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-a {
-    text-decoration: none;
-}
 
-a:active {
-    text-decoration: none;
-}
 
     /* Navbar*/
 
@@ -173,26 +167,6 @@ body {
         -ms-overflow-style: none;  /* IE and Edge */
          scrollbar-width: none;  /* Firefox */
     }     
-.input-field {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center; 
- }
-
-.input-field label {
-    width: 200px;
-    margin-right: 10px;
-    font-size: 1.2rem;
- }
-
-.input-field .input {
-     width: 100%;
-     outline: none;
-     border: 1px solid #d5dbd9;
-     border-radius: 3px;
-     font-size: 15px;
-     padding: 8px 10px;
- }
 
 .input-field .input:focus {
      border: 1px solid var(--border);
@@ -226,31 +200,18 @@ body {
     cursor: pointer;
  }
 
-.ssdm {
-    font-size: 1.2rem;
- }
-
-.mdpo {
-     font-size: 1.2rem;
- }
-
-input[type=radio] {
-    border: 1px solid #fff;
-    padding: 0.5em;
-    -webkit-appearance: none;
-  }
 
 
-table {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    margin-bottom: 20px;
-    border-spacing: 10px;
-}
-.recherche-achats{
-	
-}
-.recherche.mes.ventes{
-	
+ .recherche-mes-ventes,.recherche-achats{
+ 
+display : inline-block;
+margin : 25px;
+width : 40%;
+font-size : 20px;
+text-align : justify;	
+} 
+
+#ck{
+vertical-align: bottom;
+position: relative;
 }

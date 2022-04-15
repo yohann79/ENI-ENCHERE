@@ -32,16 +32,11 @@ public class AccueilServlet extends HttpServlet {
 
             HttpSession session = req.getSession();
             utilisateur = (Utilisateur) session.getAttribute("utilisateur");
-            if (utilisateur != null) {
-                ArrayList<ArticleVendu> articles = new ArrayList<>();
-                articles = articlesManager.getAllArticles();
-                req.setAttribute("articles", articles);
-                req.getRequestDispatcher("WEB-INF/public/home/accueil.jsp").forward(req, resp);
-            } else {
-                session.removeAttribute("utlisateur");
-                session.invalidate();
-                req.getRequestDispatcher("/Connexion").forward(req, resp);
-            }
+            ArrayList<ArticleVendu> articles = new ArrayList<>();
+            articles = articlesManager.getAllArticles();
+            req.setAttribute("articles", articles);
+            req.getRequestDispatcher("WEB-INF/public/home/accueil.jsp").forward(req, resp);
+
         } catch (ArticlesNotFound e) {
             req.getRequestDispatcher("WEB-INF/public/home/accueilAucuneEnchere.jsp").forward(req, resp);
         }

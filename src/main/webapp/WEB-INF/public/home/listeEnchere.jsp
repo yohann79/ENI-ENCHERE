@@ -56,48 +56,48 @@
 
 
             <div>
-                    <input type="radio" id="huey" name="drone" value="huey"
+                    <input class="rd" type="radio" id="achat" name="achats-vente" value="achat"
                         checked>
-                    <label for="huey">Achats</label>
+                    <label class="rdlb"for="achat">Achats</label>
             
                 <ul>
                     <li>
-                        <input name="Ssdm" id="Ssdm" type="checkbox">
-                        <label class="ssdm" for="Ssdm">Enchères ouvertes</label>
+                        <input class="ck"  class="" name="ckachat" id="ouverte" type="checkbox">
+                        <label class="cklb" for="ouverte">Enchères ouvertes</label>
                     </li>
 
                     <li>
-                        <input name="Ssdm" id="Ssdm" type="checkbox">
-                        <label class="ssdm" for="Ssdm">Mes enchères en cours</label>
+                        <input  class="ck" name="ckachat" id="encours" type="checkbox">
+                        <label class="cklb" for="encours">Mes enchères en cours</label>
                     </li>
                     
                     <li>
-                        <input name="Ssdm" id="Ssdm" type="checkbox">
-                        <label class="ssdm" for="Ssdm">Mes enchères remportées</label>
+                        <input class="ck"  name="ckachat" id="remporte" type="checkbox">
+                        <label class="cklb" for="remporte">Mes enchères remportées</label>
                     </li>
                 </ul>
             </div>
 
 	</div>
-            <div class="recherche-mes-vente">
-                <input type="radio" id="huey" name="drone" value="huey">
-                <label for="huey">Mes Ventes</label>
+            <div class="recherche-mes-ventes">
+                <input class= "rd" type="radio" id="vente" name="achats-vente" value="vente">
+                <label class= "rdlb" for="vente">Mes Ventes</label>
             
 
             <ul>
                 <li>
-                    <input name="Ssdm" id="Ssdm" type="checkbox">
-                    <label class="ssdm" for="Ssdm">Mes ventes en cours</label>
+                    <input class="ck"  name="ckvente" id="encours" type="checkbox">
+                    <label class="cklb" for="encours">Mes ventes en cours</label>
                 </li>
                 
                 <li>
-                    <input name="Ssdm" id="Ssdm" type="checkbox">
-                    <label class="ssdm" for="Ssdm">Ventes non débutés</label>
+                    <input class="ck"  name="ckvente" id="debut" type="checkbox">
+                    <label class="cklb" for="debut">Ventes non débutés</label>
                 </li>
 
                 <li>
-                    <input name="Ssdm" id="Ssdm" type="checkbox">
-                    <label class="ssdm" for="Ssdm">Ventes terminées</label>
+                    <input class="ck"  name="ckvente" id="termine" type="checkbox">
+                    <label class="cklb" for="termine">Ventes terminées</label>
                 </li>
             </ul>
 

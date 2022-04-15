@@ -37,7 +37,7 @@
         <div id="list1">
 			
 			<label>Pseudo :</label><p><%=utilisateur.getPseudo() %></p><br>		
-			<label>Nom :</label><p><%=utilisateur.getNom() %></p>	<br>
+			<label>Nom :</label><p><%=utilisateur.getNom() %></p><br>
 			<label>Prenom :</label><p><%=utilisateur.getPrenom() %></p><br>	
 			<label>Email :</label><p><%=utilisateur.getEmail() %></p><br>	
 			<label>Téléphone :</label><p><%=utilisateur.getTelephone() %></p><br>	

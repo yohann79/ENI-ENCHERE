@@ -13,55 +13,33 @@
 <style>
 <%@include file="/css/style.css"%>
 </style>
-		
-        <!--Font Awesome CDN-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
+<title>Détail Vente</title>
 
-        <title>Détail Vente</title>
-        
-    </head>
+</head>
     
   <body>
   <!-- Navigation -->
  	<%@ include file = "/WEB-INF/public/home/navigation.jsp" %>
-   <!--Head-->
-    <div class="head">
+   
+    <div id="container">
+		<div id="container2">
       <h1>Détail Vente</h1>
     </div>
-    <% Utilisateur connectedUser = (Utilisateur) session.getAttribute("ConnectedUser"); %>
-	<% ArticleVendu article = (ArticleVendu)request.getAttribute("ArticleAffiche"); %>
-    <div class="container-vente">
-        <div class="card-img-container">
-            <img src="img/tournevis.jpeg" alt="">
-        </div>
-        <table>
-       		 <tr>
-                <td class="td1"><p class="value-td1">Nom:</p></td>
-                <td class="td2"><p class="value-td2">${article.nomArticle}</p></td>
-            </tr>
-            <tr>
-                <td class="td1"><p class="value-td1">Description:</p></td>
-                <td class="td2"><p class="value-td2"><${article.description}%></p></td>
-            </tr>
-            <tr>
-                <td class="td1"><p class="value-td1">Mise à prix:</p></td>
-                <td class="td2"><p class="value-td2">${article.prixInitial} pts pts</p></td>
-            </tr>  
-            <tr>
-                <td class="td1"><p class="value-td1">Fin de l'enchère:</p></td>
-                <td class="td2"><p class="value-td2">${article.dateFinEnchere} pts</p></td>
-            </tr>
-            <tr>
-                <td class="td1"><p class="value-td1">Retrait:</p></td>
-                <td class="td2"><p class="value-td2">${article.rue}</br> ${article.code_postal}</br> ${article.ville} </p></td>
-            </tr>
-            <tr>
-                <td class="td1"><p class="value-td1">Vendeur:</p></td>
-                <td class="td2"><p class="value-td2">${article.vendeur}</p></td>
-            </tr> 
-        </table>
+    <% Utilisateur utilisateur = (Utilisateur) session.getAttribute("utilisateur"); %>
+	<% ArticleVendu article = (ArticleVendu)request.getAttribute("article"); %>
 	
+        
+        
+       	 <div id="list1">
+			<label>Nom :</label><p><%=article.getNomArticle() %></p><br>
+			<label>Description :</label><p><%=article.getDescription() %></p><br>	
+			<label>Mise à Prix :</label><p><%=article.getPrixInitial() %></p><br>	
+			<label>Fin enchère :</label><p><%=article.getDateFinEnchere() %></p><br>	
+			<label>Retrait :</label><p><%=article.getLieuRetrait().getRue() %>,<%=article.getLieuRetrait().getCode_postal()%>,<%=article.getLieuRetrait().getVille() %></p><br>
+			<label>Vendeur :</label><p><%=article.getVendeur().getPseudo() %></p><br>
+				
+		</div>
 		<form action="<%=request.getContextPath()%>/Enchere" method="post">
 			<div class="input-field">
 				<label for="mPrix">Ma Proposition :</label>
@@ -72,10 +50,13 @@
 		    </div>
 	      
 		</form>
-      <a href ="<%=request.getContextPath()%>/Acceuil"><button class="btn" type="button"> <!--change that with index.html file location-->
-        Back
-      </button>
-      </a>
+
+         <form action="<%=request.getContextPath()%>/Accueil" method="post">
+			<input type="submit" value="Annuler" /> 
+	</form>
+        
+     
+     
     </div>
   </body>
 </html>
