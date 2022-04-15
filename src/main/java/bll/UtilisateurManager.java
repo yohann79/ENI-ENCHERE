@@ -13,7 +13,7 @@ public class UtilisateurManager {
         this.utilisateurDAO = DaoFactory.getUtilisateurDAO();
     }
 
-    public Utilisateur seConnecter(String user, String mpd) throws UtilisateurNotFound {
+    public Utilisateur seConnecter(String user, String mpd) throws UtilisateurNotFound, SQLException {
 
         return utilisateurDAO.getUtilisateur(user, mpd);
     }

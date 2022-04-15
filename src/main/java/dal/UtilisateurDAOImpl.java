@@ -33,7 +33,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
     }
 
     @Override
-    public Utilisateur getUtilisateur(String user, String mpd) throws UtilisateurNotFound {
+    public Utilisateur getUtilisateur(String user, String mpd) throws UtilisateurNotFound, SQLException {
         String req = "SELECT * FROM UTILISATEURS where pseudo = ? and mot_de_passe = ?";
         try (Connection cnn = ConnectionProvider.getConnection();) {
             PreparedStatement stm = cnn.prepareStatement(req);
@@ -63,8 +63,8 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            throw new SQLException("erreur sql");
         }
-        return null;
     }
 
     @Override
@@ -92,15 +92,11 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
     @Override
     public Boolean getModif(Utilisateur utilisateur) throws ErrorModifParameters {
         String req = "update UTILISATEURS SET pseudo = ?, nom = ?,prenom=?,email=?,telephone=?,rue=?,code_postal=?,ville=?,mot_de_passe=? where no_utilisateur = ?";
-        String reqVerif = "select pseudo,email from UTILISATEURS where pseudo =? and email=?";
 
         try (Connection cnn = ConnectionProvider.getConnection();) {
-            PreparedStatement stmVerif = cnn.prepareStatement(reqVerif);
-            stmVerif.setString(1, utilisateur.getPseudo());
-            stmVerif.setString(2, utilisateur.getEmail());
-            ResultSet rs = stmVerif.executeQuery();
-            System.out.println(rs.next());
-            if (!rs.next()) {
+            Boolean UtilisateurExistEnBase = this.getUtilisateurByPseudoAndEmail(utilisateur.getPseudo(),
+                    utilisateur.getEmail());
+            if (!UtilisateurExistEnBase){
                 PreparedStatement stm = cnn.prepareStatement(req);
                 stm.setString(1, utilisateur.getPseudo());
                 stm.setString(2, utilisateur.getNom());
@@ -116,12 +112,10 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
                 stm.executeUpdate();
                 return true;
             } else {
-                System.out.println("error");
                 throw new ErrorModifParameters("pseudo ou email deja existant");
             }
 
         } catch (SQLException e) {
-            System.out.println("catch1" + e.getMessage());
             throw new ErrorModifParameters("champ nom valide" + e.getMessage());
         }
 
@@ -133,7 +127,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO {
 
         Boolean UtilisateurExistEnBase = this.getUtilisateurByPseudoAndEmail(utilisateur.getPseudo(),
                 utilisateur.getEmail());
-        if (UtilisateurExistEnBase == false) {
+        if (!UtilisateurExistEnBase ){
 
             try (Connection cnn = ConnectionProvider.getConnection();) {
                 PreparedStatement stm = cnn.prepareStatement(req);

@@ -49,7 +49,6 @@
 	
 
 	<input type="submit" value="Enregister" />
-	<%System.out.println("test form"); %>
 
    	</form>
    <form action="<%=request.getContextPath()%>/Accueil" method="post">

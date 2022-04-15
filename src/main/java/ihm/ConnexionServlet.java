@@ -1,6 +1,7 @@
 package ihm;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,12 +40,10 @@ public class ConnexionServlet extends HttpServlet {
         String mpd = req.getParameter("password");
         try {
             Utilisateur utilisateur = utilisateurManager.seConnecter(user, mpd);
-            HttpSession session = req.getSession(true);
+            HttpSession session = req.getSession();
             session.setAttribute("utilisateur", utilisateur);
             resp.sendRedirect(req.getContextPath() + "/Accueil");
-        } catch (UtilisateurNotFound e) {
-            HttpSession session = req.getSession();
-            session.setAttribute("error", e.getMessage());
+        } catch (UtilisateurNotFound | SQLException e) {
             req.getRequestDispatcher("WEB-INF/public/home/connexionError.jsp").forward(req, resp);
         }
 

@@ -9,7 +9,7 @@ import bll.UtilisateurNotFound;
 import bo.Utilisateur;
 
 public interface UtilisateurDAO {
-    public Utilisateur getUtilisateur(String user, String mpd) throws UtilisateurNotFound;
+    public Utilisateur getUtilisateur(String user, String mpd) throws UtilisateurNotFound, SQLException;
 
     public Boolean getModif(Utilisateur utilisateur) throws ErrorModifParameters;
 
