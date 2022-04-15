@@ -27,7 +27,7 @@ public class ConnexionServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/public/home/connexion.jsp").forward(req, resp);
+        req.getRequestDispatcher("WEB-INF/public/home/connexion.jsp").forward(req, resp);
     }
 
     /*
@@ -45,7 +45,7 @@ public class ConnexionServlet extends HttpServlet {
         } catch (UtilisateurNotFound e) {
             HttpSession session = req.getSession();
             session.setAttribute("error", e.getMessage());
-            req.getRequestDispatcher("/WEB-INF/public/home/connexionError.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/public/home/connexionError.jsp").forward(req, resp);
         }
 
     }

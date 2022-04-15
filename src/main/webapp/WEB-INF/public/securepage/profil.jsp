@@ -36,15 +36,15 @@
         
         <div id="list1">
 			
-			<label>Pseudo :</label><input type="text" value="${utilisateur.pseudo}" disabled="disabled"/><br>			
-			<label>Nom :</label><input type="text" value="${utilisateur.nom}" disabled="disabled"/><br>	
-			<label>Prenom :</label><input type="text" value="${utilisateur.prenom}" disabled="disabled"/><br>	
-			<label>Email :</label><input type="text" value="${utilisateur.email}" disabled="disabled"/><br>	
-			<label>Téléphone :</label><input type="text"  value="${utilisateur.telephone}" disabled="disabled"/><br>	
-			<label>Rue :</label><input type="text" value="${utilisateur.rue}" disabled="disabled"/><br>	
-			<label>Code Postal :</label><input type="text" value="${utilisateur.code_postal}" disabled="disabled"/><br>	
-			<label>Ville :</label><input type="text" name="ville" value="${utilisateur.ville}" disabled="disabled"/><br>	
-			<label>Credit :</label><input type="text" name="credit"  disabled="disabled" placeholder="${utilisateur.credit}" disabled="disabled"/><br>	
+			<label>Pseudo :</label><p><%=utilisateur.getPseudo() %></p><br>		
+			<label>Nom :</label><p><%=utilisateur.getNom() %></p>	<br>
+			<label>Prenom :</label><p><%=utilisateur.getPrenom() %></p><br>	
+			<label>Email :</label><p><%=utilisateur.getEmail() %></p><br>	
+			<label>Téléphone :</label><p><%=utilisateur.getTelephone() %></p><br>	
+			<label>Rue :</label><p><%=utilisateur.getRue() %></p><br>
+			<label>Code Postal :</label><p><%=utilisateur.getCode_postal() %></p><br>	
+			<label>Ville :</label><p><%=utilisateur.getVille() %></p><br>	
+			<label>Credit :</label><p><%=utilisateur.getCredit() %></p><br>	
 
 	</div>
 		

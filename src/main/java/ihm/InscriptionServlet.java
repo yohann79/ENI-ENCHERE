@@ -25,7 +25,7 @@ public class InscriptionServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/public/home/inscription.jsp").forward(req, resp);
+        req.getRequestDispatcher("WEB-INF/public/home/inscription.jsp").forward(req, resp);
 
     }
 

@@ -66,8 +66,8 @@
 					<label>Fin de l'enchère</label><input type="date" name="dateFinEnchere" min=datetime-local max=datetime-local+60/><br>
 					</div>
 				<div class="main-div">
-				<div class="main-div-overlay-text">
-   						 Retrait
+				<div class="main-div-overlay-text" align="center">
+   						 <h2>Retrait</h2>
   				</div>	
 				
 					<label>Rue</label><input type="text" name="rue" maxlength="30"/><br>

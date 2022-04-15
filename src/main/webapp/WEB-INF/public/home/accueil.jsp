@@ -12,8 +12,6 @@
 <style>
 <%@include file="/css/accueil.css"%>
 </style>
-<link rel="shortcut icon"
-	href="<%=request.getContextPath()%>/ressources/img/icon.ico">
 <title>Accueil</title>
 
      <!-- navigation -->
@@ -48,29 +46,29 @@
 		<h3>Bienvenue sur le site d'enchere de la DreamTeam</h3>
 	</div>
 	<div id="article-container">
-		<h1>Liste des dernières enchères</h1>
+		<h3 align="center">Liste des dernières enchères</h3>
 		<%
 		for (ArticleVendu article : articles) {
 		%>
-		<article>
+		
 			<div id="article" >
-				<h3>
+				<h4>
 					Nom :
-					<%=article.getNomArticle()%></h3>
-				<h3>
+					<%=article.getNomArticle()%></h4>
+				<h4>
 					Description :
-					<%=article.getDescription()%></h3>
-				<h3>
+					<%=article.getDescription()%></h4>
+				<h4>
 					Prix :
-					<%=article.getPrixInitial()%></h3>
-				<h3>
-					Date de fin de l'enchere :
-					<%=article.getDateFinEnchere()%></h3>
+					<%=article.getPrixInitial()%></h4>
+				<h4>
+					Fin de l'enchere :
+					<%=article.getDateFinEnchere()%></h4>
 				<form action="<%=request.getContextPath()%>/Enchere">
 					<input type="submit" value="Acceder à l'article" />
 				</form>
 			</div>
-		</article>
+		
 		<%
 		}
 		%>

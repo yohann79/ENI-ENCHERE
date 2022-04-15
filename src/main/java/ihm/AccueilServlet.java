@@ -36,14 +36,14 @@ public class AccueilServlet extends HttpServlet {
                 ArrayList<ArticleVendu> articles = new ArrayList<>();
                 articles = articlesManager.getAllArticles();
                 req.setAttribute("articles", articles);
-                req.getRequestDispatcher("/WEB-INF/public/home/accueil.jsp").forward(req, resp);
+                req.getRequestDispatcher("WEB-INF/public/home/accueil.jsp").forward(req, resp);
             } else {
                 session.removeAttribute("utlisateur");
                 session.invalidate();
                 req.getRequestDispatcher("/Connexion").forward(req, resp);
             }
         } catch (ArticlesNotFound e) {
-            req.getRequestDispatcher("/WEB-INF/public/home/accueilAucuneEnchere.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/public/home/accueilAucuneEnchere.jsp").forward(req, resp);
         }
 
     }

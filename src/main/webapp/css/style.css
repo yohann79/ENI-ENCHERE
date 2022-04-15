@@ -1,5 +1,6 @@
 body{
     background: #D1F0FF;
+    font-family : Courier New, Courier, Prestige, monospace;
 }
 
 #container{
@@ -52,6 +53,7 @@ input[type=submit]:hover {
     background-color: white;
     color: #063758;
     border: 1px solid #063758;
+    
 }
 #error{
 	color: red;
@@ -61,18 +63,15 @@ input[type=submit]:hover {
 }
 .main-div {
   	position: relative;
-  	border: 1px solid black;
+  	border: 1px solid #f1f1f1;
+    background: #fff;
+    margin-bottom : 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .main-div-overlay-text {
-	
-  	position: absolute;
-  	left: 10px;
-  	right: 0;
-  	margin-top : 25px;
   	margin: auto;
-  	top:-30px;
-  	text-align : justify;
+  	text-align : center;
 }
 
 label{
@@ -84,4 +83,8 @@ label{
 
 #list1{
 	margin-bottom : 15px;
+}
+
+input[type=text] {
+   width : 250px;
 }

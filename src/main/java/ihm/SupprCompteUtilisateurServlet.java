@@ -48,7 +48,7 @@ public class SupprCompteUtilisateurServlet extends HttpServlet {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            req.getRequestDispatcher("/WEB-INF/public/securepage/profil.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/public/securepage/profil.jsp").forward(req, resp);
         }
     }
 
