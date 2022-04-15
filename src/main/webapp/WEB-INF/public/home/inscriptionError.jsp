@@ -55,7 +55,7 @@
 				
 					<label><b>Répéter mots de passe</b></label>
 					<input type="password" name="confirmMotDePasse" maxlength="30"/>
-					<p id = "error"><span>${error}</span></p>
+					<p id = "error"><span>Erreur lors de l'inscription</span></p>
 			<input type="submit" value="Créer un compte" />
 		</form>
 	</div>

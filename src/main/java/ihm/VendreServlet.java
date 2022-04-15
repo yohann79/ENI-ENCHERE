@@ -89,7 +89,7 @@ public class VendreServlet extends HttpServlet {
             Retrait.setRue(rue);
             Retrait.setCode_postal(codePostal);
             Retrait.setVille(ville);
-
+            System.out.println("test");
             try {
                 Boolean result = artcilesManager.insertArticle(ArticleVendu);
                 if (result) {
@@ -97,7 +97,7 @@ public class VendreServlet extends HttpServlet {
                     session.setAttribute("ArticleVendu", ArticleVendu);
                     req.getRequestDispatcher("/Accueil").forward(req, resp);
                 } else {
-                    String message = "erreur vente format de données non valide";
+                    String message = "erreur vente format de donnï¿½es non valide";
                     req.setAttribute("error", message);
                     req.getRequestDispatcher("WEB-INF/public/securepage/vendreError.jsp").forward(req, resp);
                 }

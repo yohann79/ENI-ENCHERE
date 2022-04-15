@@ -34,7 +34,7 @@
 					<li><label><b>Email</b></label>
 					<input type="text" name="email" maxlength="50"/></li>			
 				
-					<li><label><b>Numï¿½ro de tï¿½lï¿½phone</b></label>
+					<li><label><b>Numéro de téléphone</b></label>
 					<input type="text" name="telephone" maxlength="15"/></li>				
 				
 					<li><label><b>Rue</b></label>
@@ -49,7 +49,7 @@
 					<li><label><b>Mots de passe</b></label>
 					<input type="password" name="motDePasse" maxlength="30"/></li>
 								
-					<li><label><b>Rï¿½pï¿½ter mots de passe</b></label>
+					<li><label><b>Répéter mots de passe</b></label>
 					<input type="password" name="confirmMotDePasse" maxlength="30"/></li>
 				</ul>
 			<input type="submit" value="Créer un compte" />

@@ -29,7 +29,7 @@ public class LoginFiltre implements Filter {
         HttpSession session = request.getSession();
 
         if (session.getAttribute("utilisateur") == null) {
-            response.sendRedirect(request.getContextPath() + "/Acceuil"); // Si utilisateur non trouvé on rediriger
+            response.sendRedirect(request.getContextPath() + "/Accueil"); // Si utilisateur non trouvï¿½ on rediriger
                                                                           // vers la connexion
         } else {
             chain.doFilter(req, res); // utilisateur trouver -> continuer la requete

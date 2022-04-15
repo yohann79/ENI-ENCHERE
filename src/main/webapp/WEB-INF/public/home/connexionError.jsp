@@ -21,7 +21,7 @@
 			<input placeholder="Entrer le nom d'utilisateur" type="text"
 				name="username" /> <label><b>Mot de passe</b></label> 
 				<input placeholder="Entrer le mot de passe" type="password" name="password" />
-				<p id="error"><span>${error}</span></p>
+				<p id="error"><span>Erreur lors de la connexion</span></p>
 			<input id='submit' type="submit" value="Connexion" />
 		</form>
 		<form action="<%=request.getContextPath()%>/Inscription">

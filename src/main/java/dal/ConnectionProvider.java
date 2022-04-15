@@ -14,12 +14,13 @@ public abstract class ConnectionProvider {
 
     static {
         try {
+        	//set up du pool de connexion en rÃ©cupÃ©rant les infos depuis le contextet.xml
             Context context = new InitialContext();
             dataSource = (DataSource) context.lookup("java:comp/env/jdbc/pool_cnx");
         } catch (NamingException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-            throw new RuntimeException("Impossible d'accéder à la base de données.");
+            throw new RuntimeException("Impossible d'accï¿½der ï¿½ la base de donnï¿½es.");
         }
 
     }
