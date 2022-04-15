@@ -62,8 +62,8 @@
 
 							
 					<label>Mise à Prix</label><input type="text" name="prixInitial" maxlength="30"/><br>						
-					<label>Début de l'enchère</label><input type="date" name="dateDebutEnchere" min=datetime-local max=datetime-local+30/><br>			
-					<label>Fin de l'enchère</label><input type="date" name="dateFinEnchere" min=datetime-local max=datetime-local+60/><br>
+					<label>Début Enchère</label><input type="date" name="dateDebutEnchere" min=datetime-local max=datetime-local+30/><br>			
+					<label>Fin Enchère</label><input type="date" name="dateFinEnchere" min=datetime-local max=datetime-local+60/><br>
 					</div>
 				<div class="main-div">
 				<div class="main-div-overlay-text" align="center">

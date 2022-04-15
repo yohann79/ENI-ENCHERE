@@ -52,7 +52,7 @@
         </button>
     </div>
     
-    <div class="recherche-sup">
+    <div class="recherche-achats">
 
 
             <div>
@@ -62,42 +62,41 @@
             
                 <ul>
                     <li>
-                        <input name="Ssdm" id="Ssdm" type="radio">
+                        <input name="Ssdm" id="Ssdm" type="checkbox">
                         <label class="ssdm" for="Ssdm">Enchères ouvertes</label>
                     </li>
 
                     <li>
-                        <input name="Ssdm" id="Ssdm" type="radio">
+                        <input name="Ssdm" id="Ssdm" type="checkbox">
                         <label class="ssdm" for="Ssdm">Mes enchères en cours</label>
                     </li>
                     
                     <li>
-                        <input name="Ssdm" id="Ssdm" type="radio">
+                        <input name="Ssdm" id="Ssdm" type="checkbox">
                         <label class="ssdm" for="Ssdm">Mes enchères remportées</label>
                     </li>
                 </ul>
             </div>
 
 	</div>
-            <div>
-                <input type="radio" id="huey" name="drone" value="huey"
-                       checked>
+            <div class="recherche-mes-vente">
+                <input type="radio" id="huey" name="drone" value="huey">
                 <label for="huey">Mes Ventes</label>
             
 
             <ul>
                 <li>
-                    <input name="Ssdm" id="Ssdm" type="radio">
+                    <input name="Ssdm" id="Ssdm" type="checkbox">
                     <label class="ssdm" for="Ssdm">Mes ventes en cours</label>
                 </li>
                 
                 <li>
-                    <input name="Ssdm" id="Ssdm" type="radio">
+                    <input name="Ssdm" id="Ssdm" type="checkbox">
                     <label class="ssdm" for="Ssdm">Ventes non débutés</label>
                 </li>
 
                 <li>
-                    <input name="Ssdm" id="Ssdm" type="radio">
+                    <input name="Ssdm" id="Ssdm" type="checkbox">
                     <label class="ssdm" for="Ssdm">Ventes terminées</label>
                 </li>
             </ul>
