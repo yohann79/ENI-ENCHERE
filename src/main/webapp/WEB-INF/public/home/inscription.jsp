@@ -20,7 +20,7 @@
 		
 		<h1>Inscription</h1>
 		
-			<p align="left"><a href="Connexion"><img id="bouton-retour" src="<%=request.getContextPath()%>/ressources/img/bouton-retour.jpg"><br></a></p>
+			<p align="left"><a href="Accueil"><img id="bouton-retour" src="<%=request.getContextPath()%>/ressources/img/bouton-retour.jpg"><br></a></p>
 				<ul id="list">
 					<li><label><b>Pseudo</b></label>
 					<input type="text" name="pseudo" maxlength="30"/></li>

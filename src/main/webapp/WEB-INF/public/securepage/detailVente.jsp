@@ -26,10 +26,8 @@
 		<div id="container2">
       <h1>Détail Vente</h1>
     </div>
-		 
     <% Utilisateur utilisateur = (Utilisateur) session.getAttribute("utilisateur"); %>
-	<% ArticleVendu article = (ArticleVendu) session.getAttribute("article"); %>
-	
+	<% ArticleVendu article = (ArticleVendu)request.getAttribute("articleDetail"); %>
 
         
        	 <div id="list1">
